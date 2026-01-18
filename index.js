@@ -75,7 +75,7 @@ class PortfolioApp {
                 'certification': 'Software Enginner',
                 'projects-title': 'Featured Projects',
                 'inventrack-desc': 'Advanced inventory management system with multi-role access and real-time tracking capabilities.',
-                'ecommerce-desc': 'Complete online shopping platform with payment integration and inventory management.',
+                'ecommerce-desc': 'Comprehensive platform for managing medical appointments and multi-role medical processes with integration into various third-party programs.',
                 'analytics-desc': 'Real-time data visualization platform with interactive charts and reports.',
                 'view-project': 'View Project',
                 'skills-title': 'Skills',
