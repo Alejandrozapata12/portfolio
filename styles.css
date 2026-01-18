@@ -663,6 +663,8 @@ section {
     margin-bottom: 0.5rem;
     color: var(--light-text);
     font-weight: 500;
+
+    
 }
 
 .skill-bar {
@@ -675,7 +677,7 @@ section {
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, #08CB00, #49108B);
     border-radius: 5px;
     position: relative;
     animation: skillFill 2s ease-out forwards;
@@ -737,7 +739,7 @@ section {
     transition: all 0.3s ease;
 
     svg{
-  color: var(--primary-color);
+    color: var(--primary-color);
     font-size: 1.5rem;
     min-width: 30px;
     }
@@ -1064,9 +1066,22 @@ section {
 
 /*SVG ICONS DESIGN*/
 
-svg{
-  vertical-align: middle;
+.icon-text{
+    display: inline-block;
+    align-items: center;
+    gap: 6px;
+
+    svg{
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+    }
 }
+
+.icon-white{
+    fill: #ffffff;
+}
+
 /*SVG ICONS DESIGN END*/
 
 
