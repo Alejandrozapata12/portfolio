@@ -803,6 +803,7 @@ section {
     transition: all 0.3s ease;
 }
 
+
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -810,15 +811,18 @@ section {
     box-shadow: 0 0 15px var(--primary-color);
 }
 
+
 .input-glow {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 8px; 
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1; 
 }
 
 .form-group input:focus + .input-glow,
