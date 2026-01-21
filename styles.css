@@ -634,11 +634,106 @@ section {
     box-shadow: 0 0 20px var(--primary-color);
 }
 
-/* Skills Section */
+/* SKILLS SECTION START */
 .skills-section {
     background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 50%, var(--darker-bg) 100%);
+      height: 98vh;
+}
+    
+
+    .skills-track {
+      display: flex;
+      gap: 40px;
+      width: max-content;
+      animation: scroll 28s linear infinite;
+    }
+
+    .skill-card {
+      min-width: 140px;
+      padding: 18px 22px;
+      border-radius: 22px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      background: linear-gradient(
+        160deg,
+        rgba(255,255,255,0.06),
+        rgba(0,0,0,0.55)
+      );
+      backdrop-filter: blur(14px);
+      color: var(--light-text);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: default;
+    }
+
+    .skill-card:hover {
+  transform: translateY(-8px) scale(1.04);
 }
 
+
+    /* FRONTEND */
+    .frontend {
+      color: var(--primary-color);
+      box-shadow: 0 0 35px rgba(0,255,136,0.35);
+    }
+    .frontend:hover {
+      box-shadow: 0 0 60px rgba(0,255,136,0.8);
+    }
+
+    /* BACKEND */
+    .backend {
+      color: var(--secondary-color);
+      box-shadow: 0 0 35px rgba(255,0,170,0.35);
+    }
+    .backend:hover {
+      box-shadow: 0 0 60px rgba(255,0,170,0.8);
+    }
+
+    /* TOOLS */
+    .tools {
+      color: var(--accent-color);
+      box-shadow: 0 0 35px rgba(136,0,255,0.35);
+    }
+    .tools:hover {
+      box-shadow: 0 0 60px rgba(136,0,255,0.8);
+    }
+
+    /* Scroll infinito */
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .skills-section {
+        padding: 80px 5%;
+      }
+
+      .skills-title {
+        font-size: 2.1rem;
+        margin-bottom: 50px;
+      }
+
+      .skills-track {
+        gap: 24px;
+      }
+
+      .skill-card {
+        min-width: 150px;
+        padding: 20px 24px;
+        font-size: 1rem;
+        border-radius: 18px;
+      }
+
+      .skills-wrapper{
+        margin-top: 50px;
+      }
+    }
+
+
+/*
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -711,7 +806,12 @@ section {
     100% { background-position: 30px 30px; }
 }
 
-/* Contact Section */
+*/
+
+/* SKILLS SECTION START */
+
+
+/* CONTACT SECTION START */
 .contact-section {
     background: var(--dark-bg);
 }
