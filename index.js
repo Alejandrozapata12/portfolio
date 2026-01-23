@@ -1,4 +1,3 @@
-// script.js
 class PortfolioApp {
     constructor() {
         this.currentLanguage = 'es';
@@ -22,7 +21,7 @@ class PortfolioApp {
                 'projects-completed': 'Proyectos Completados',
                 'happy-clients': 'Clientes Felices',
                 'education': 'Educación',
-                'degree': 'Tecnología en Análisis y Desarrollo de Sistemas de Software',
+                'degree': 'Tecnología en Análisis y Desarrollo de Software',
                 'certification': 'Desarrollo Personal G4 - ONE - Desarrollar Frontend',
                 'projects-title': 'Proyectos Destacados',
                 'inventrack-desc': 'Sistema avanzado de gestión de inventarios con acceso multi-rol y capacidades de seguimiento en tiempo real.',
@@ -56,6 +55,7 @@ class PortfolioApp {
                 'cta-button': 'Comenzar Proyecto',
                 'service-data': 'Análisis de datos',
                 'service-data-desc': 'Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.',
+                'show-more': 'Conozca más',
 
 
             },
@@ -112,6 +112,7 @@ class PortfolioApp {
                 'cta-button': 'Start Project',
                 'service-data': 'Data analysis',
                 'service-data-desc': 'Professional and optimal data analysis, using the best tools in the industry.',
+                'show-more': 'Learn more',
             }
             /*
             de: {
