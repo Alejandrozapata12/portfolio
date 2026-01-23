@@ -23,7 +23,7 @@ class PortfolioApp {
                 'happy-clients': 'Clientes Felices',
                 'education': 'Educación',
                 'degree': 'Tecnología en Análisis y Desarrollo de Sistemas de Software',
-                'certification': 'Ingeniería de Software',
+                'certification': 'Desarrollo Personal G4 - ONE - Desarrollar Frontend',
                 'projects-title': 'Proyectos Destacados',
                 'inventrack-desc': 'Sistema avanzado de gestión de inventarios con acceso multi-rol y capacidades de seguimiento en tiempo real.',
                 'ecommerce-desc': 'Plataforma completa de gestión de citas médicas y procesos medicos multi rol con integración en diferentes programas terceros.',
@@ -50,10 +50,14 @@ class PortfolioApp {
                 'service-responsive': 'Aplicaciones Responsivas',
                 'service-responsive-desc': 'Diseños que se adaptan a cualquier dispositivo',
                 'service-database': 'Integración de Bases de Datos',
-                'service-database-desc': 'Sistemas robustos con MySQL, MongoDB, etc.',
+                'service-database-desc': 'Sistemas robustos con MySQL.',
                 'cta-title': '¿Listo para tu próximo proyecto?',
                 'cta-subtitle': 'Trabajemos juntos para crear algo increíble',
-                'cta-button': 'Comenzar Proyecto'
+                'cta-button': 'Comenzar Proyecto',
+                'service-data': 'Análisis de datos',
+                'service-data-desc': 'Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.',
+
+
             },
             en: {
                 'nav-home': 'Home',
@@ -75,7 +79,7 @@ class PortfolioApp {
                 'happy-clients': 'Happy Clients',
                 'education': 'Education',
                 'degree': 'Tecnologys in Software Analysis and Development',
-                'certification': 'Software Enginner',
+                'certification': 'Personal Development G4 - ONE - Frontend Development',
                 'projects-title': 'Featured Projects',
                 'inventrack-desc': 'Advanced inventory management system with multi-role access and real-time tracking capabilities.',
                 'ecommerce-desc': 'Comprehensive platform for managing medical appointments and multi-role medical processes with integration into various third-party programs.',
@@ -102,10 +106,12 @@ class PortfolioApp {
                 'service-responsive': 'Responsive Applications',
                 'service-responsive-desc': 'Designs that adapt to any device',
                 'service-database': 'Database Integration',
-                'service-database-desc': 'Robust systems with MySQL, MongoDB, etc.',
+                'service-database-desc': 'Robust systems with MySQL.',
                 'cta-title': 'Ready for your next project?',
                 'cta-subtitle': "Let's work together to create something amazing",
-                'cta-button': 'Start Project'
+                'cta-button': 'Start Project',
+                'service-data': 'Data analysis',
+                'service-data-desc': 'Professional and optimal data analysis, using the best tools in the industry.',
             }
             /*
             de: {
