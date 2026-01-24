@@ -22,7 +22,7 @@ class PortfolioApp {
                 'happy-clients': 'Clientes Felices',
                 'education': 'Educación',
                 'degree': 'Tecnología en Análisis y Desarrollo de Software',
-                'certification': 'Desarrollo Personal G4 - ONE - Desarrollar Frontend',
+                'certification': 'Desarrollo Personal G4 - ONE - Desarrollador Frontend',
                 'projects-title': 'Proyectos Destacados',
                 'inventrack-desc': 'Sistema avanzado de gestión de inventarios con acceso multi-rol y capacidades de seguimiento en tiempo real.',
                 'ecommerce-desc': 'Plataforma completa de gestión de citas médicas y procesos medicos multi rol con integración en diferentes programas terceros.',
