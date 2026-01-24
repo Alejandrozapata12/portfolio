@@ -2,7 +2,7 @@ class PortfolioApp {
     constructor() {
         this.currentLanguage = 'es';
         this.translations = {
-            es: {
+            es: { 
                 'nav-home': 'Inicio',
                 'nav-about': 'Sobre Mí',
                 'nav-projects': 'Proyectos',
@@ -17,7 +17,7 @@ class PortfolioApp {
                 'about-title': 'Sobre Mí',
                 'about-p1': 'Soy un desarrollador fullstack apasionado especializado en crear aplicaciones web robustas usando tecnologías modernas como React, Node.js y sistemas de bases de datos avanzados.',
                 'about-p2': 'Con extensa experiencia en la construcción de aplicaciones escalables, me enfoco en entregar experiencias de usuario excepcionales con código limpio y eficiente.',
-                'years-exp': 'Año Experiencia',
+                'years-exp': 'Años Experiencia',
                 'projects-completed': 'Proyectos Completados',
                 'happy-clients': 'Clientes Felices',
                 'education': 'Educación',
@@ -26,7 +26,7 @@ class PortfolioApp {
                 'projects-title': 'Proyectos Destacados',
                 'inventrack-desc': 'Sistema avanzado de gestión de inventarios con acceso multi-rol y capacidades de seguimiento en tiempo real.',
                 'ecommerce-desc': 'Plataforma completa de gestión de citas médicas y procesos medicos multi rol con integración en diferentes programas terceros.',
-                'analytics-desc': 'Plataforma de visualización de datos en tiempo real con gráficos interactivos y reportes.',
+                'analytics-desc': 'Página de demostración estática para el proyecto web Inventrack.',
                 'view-project': 'Ver Proyecto',
                 'skills-title': 'Habilidades',
                 'frontend': 'Desarrollo Frontend',
@@ -74,7 +74,7 @@ class PortfolioApp {
                 'about-title': 'About Me',
                 'about-p1': 'I\'m a passionate fullstack developer specializing in creating robust web applications using modern technologies like React, Node.js, and advanced database systems.',
                 'about-p2': 'With extensive experience in building scalable applications, I focus on delivering exceptional user experiences with clean, efficient code and innovative solutions.',
-                'years-exp': 'Year Experience',
+                'years-exp': 'Years Experience',
                 'projects-completed': 'Projects Completed',
                 'happy-clients': 'Happy Clients',
                 'education': 'Education',
@@ -83,7 +83,7 @@ class PortfolioApp {
                 'projects-title': 'Featured Projects',
                 'inventrack-desc': 'Advanced inventory management system with multi-role access and real-time tracking capabilities.',
                 'ecommerce-desc': 'Comprehensive platform for managing medical appointments and multi-role medical processes with integration into various third-party programs.',
-                'analytics-desc': 'Real-time data visualization platform with interactive charts and reports.',
+                'analytics-desc': 'Static demo page for the Inventrack web project.',
                 'view-project': 'View Project',
                 'skills-title': 'Skills',
                 'frontend': 'Frontend Development',
