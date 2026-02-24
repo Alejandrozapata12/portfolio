@@ -2,7 +2,7 @@ class PortfolioApp {
     constructor() {
         this.currentLanguage = 'es';
         this.translations = {
-            es: { 
+            es: {
                 'nav-home': 'Inicio',
                 'nav-about': 'Sobre Mí',
                 'nav-projects': 'Proyectos',
@@ -56,6 +56,7 @@ class PortfolioApp {
                 'service-data': 'Análisis de datos',
                 'service-data-desc': 'Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.',
                 'show-more': 'Conozca más',
+                'analytics-appo': 'Langing Page del proyecto AppointmentPro'
 
 
             },
@@ -113,6 +114,7 @@ class PortfolioApp {
                 'service-data': 'Data analysis',
                 'service-data-desc': 'Professional and optimal data analysis, using the best tools in the industry.',
                 'show-more': 'Learn more',
+                'analytics-appo': 'Landing page for AppointmentPro project'
             }
             /*
             de: {
