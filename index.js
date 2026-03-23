@@ -711,6 +711,7 @@ class PortfolioApp {
         });
     }
 
+    /*
     setupFormValidation() {
         const form = document.getElementById('contactForm');
         if (!form) return;
@@ -732,6 +733,7 @@ class PortfolioApp {
         });
     }
 
+    */
     setupScrollToTop() {
         const scrollTopBtn = document.getElementById('scrollTop');
         if (!scrollTopBtn) return;
