@@ -8,7 +8,8 @@ class PortfolioApp {
                 'nav-projects': 'Proyectos',
                 'nav-skills': 'Habilidades',
                 'nav-contact': 'Contacto',
-                'hero-name': 'Alejandro Obando Zapata',
+                'nav-experience': 'Experiencia',
+                'hero-name': 'Alejandro Obando Zapata', 
                 'hero-great': 'Hola, soy',
                 'hero-title': 'Desarrollador Web FullStack',
                 'hero-desc': 'Creando experiencias digitales con tecnologías de vanguardia y soluciones innovadoras',
@@ -43,6 +44,34 @@ class PortfolioApp {
                 'quick-links': 'Enlaces Rápidos',
                 'contact': 'Contacto',
                 'all-rights': 'Todos los derechos reservados',
+                'privacy-policy': 'Política de Privacidad',
+                'terms-conditions': 'Términos y Condiciones',
+                'modal-title-privacy': 'Política de Privacidad',
+                'modal-text-privacy': 'En AlejoDev protegemos tus datos según GDPR y normativas locales. Los datos personales se usan solo para contacto y no se venden a terceros.',
+                'modal-title-terms': 'Términos y Condiciones',
+                'modal-text-terms': 'El uso del sitio implica aceptación de las condiciones de servicio. AlejoDev no se hace responsable por decisiones tomadas basadas en la información aquí contenida.',
+                'view-certificate': 'Ver certificado',
+                'certificate-title': 'Certificado',
+                'certificate-note': 'Para ver el certificado completo, usa el botón de descarga.',
+                'download-certificate': 'Descargar certificado',
+                'terms-conditions': 'Términos y Condiciones',
+                'modal-title-privacy': 'Política de Privacidad',
+                'modal-text-privacy': 'En AlejoDev protegemos tus datos según GDPR y normativas locales. Los datos personales se usan solo para contacto y no se venden a terceros.',
+                'modal-title-terms': 'Términos y Condiciones',
+                'modal-text-terms': 'El uso del sitio implica aceptación de las condiciones de servicio. AlejoDev no se hace responsable por decisiones tomadas basadas en la información aquí contenida.',
+                'show-more-projects': 'Mostrar más',
+                'show-less-projects': 'Mostrar menos',
+                'experience-title': 'Experiencia Laboral',
+                'experience-role': 'Desarrollador Web FullStack',
+                'experience-company': 'Servicio Nacional De Aprendizaje - SENA',
+                'experience-date': '2026',
+                'experience-tools': 'Herramientas y tecnologías: HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.',
+                'experience-project': 'Proyecto: Inventrack — app web de gestión de inventarios.',
+                'experience-item-1': 'Arquitectura fullstack con API REST para gestión de productos, categorías y usuarios.',
+                'experience-item-2': 'Login seguro con roles Admin/Empleado y control de acceso a rutas.',
+                'experience-item-3': 'Dashboard dinámico con métricas en tiempo real, filtros de inventario y alertas low-stock.',
+                'experience-item-4': 'Integración de la base de datos MySQL con migraciones y consultas optimizadas.',
+                'experience-item-5': 'Interfaz responsive y animaciones tipo neon en componentes clave.',
                 'services-title': 'Servicios Profesionales',
                 'service-web-dev': 'Desarrollo Web FullStack',
                 'service-web-desc': 'Aplicaciones completas con backend y frontend integrados',
@@ -66,6 +95,7 @@ class PortfolioApp {
                 'nav-projects': 'Projects',
                 'nav-skills': 'Skills',
                 'nav-contact': 'Contact',
+                'nav-experience': 'Experience',
                 'hero-name': 'Alejandro Obando Zapata',
                 'hero-great': 'Hello, I\'m',
                 'hero-title': 'FullStack Web Developer',
@@ -101,8 +131,37 @@ class PortfolioApp {
                 'quick-links': 'Quick Links',
                 'contact': 'Contact',
                 'all-rights': 'All rights reserved',
+                'privacy-policy': 'Privacy Policy',
+                'terms-conditions': 'Terms & Conditions',
+                'modal-title-privacy': 'Privacy Policy',
+                'modal-text-privacy': 'At AlejoDev we protect your data according to GDPR and local standards. Personal data is used only for contact and is not sold to third parties.',
+                'modal-title-terms': 'Terms & Conditions',
+                'modal-text-terms': 'Using this site implies acceptance of the terms of service. AlejoDev is not responsible for decisions made based on the contained information.',
+                'view-certificate': 'View Certificate',
+                'certificate-title': 'Certificate',
+                'certificate-note': 'To view the full certificate, use the download button.',
+                'download-certificate': 'Download Certificate',
+                'terms-conditions': 'Terms & Conditions',
+                'modal-title-privacy': 'Privacy Policy',
+                'modal-text-privacy': 'At AlejoDev we protect your data according to GDPR and local standards. Personal data is used only for contact and is not sold to third parties.',
+                'modal-title-terms': 'Terms & Conditions',
+                'modal-text-terms': 'Using this site implies acceptance of the terms of service. AlejoDev is not responsible for decisions made based on the contained information.',
+                'show-more-projects': 'Show More',
+                'show-less-projects': 'Show Less',
+                'experience-title': 'Work Experience',
+                'experience-role': 'FullStack Web Developer',
+                'experience-company': 'Servicio Nacional De Aprendizaje - SENA',
+                'experience-date': '2026',
+                'experience-tools': 'Tools and technologies: HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.',
+                'experience-project': 'Project: Inventrack — inventory management web app.',
+                'experience-item-1': 'Fullstack architecture with REST API for products, categories, and users management.',
+                'experience-item-2': 'Secure login with Admin/Employee roles and route access control.',
+                'experience-item-3': 'Dynamic dashboard with real-time metrics, inventory filters, and low-stock alerts.',
+                'experience-item-4': 'MySQL database integration with migrations and optimized queries.',
+                'experience-item-5': 'Responsive interface and neon-style animations in key components.',
                 'services-title': 'Professional Services',
                 'service-web-dev': 'FullStack Web Development',
+
                 'service-web-desc': 'Complete applications with integrated backend and frontend',
                 'service-responsive': 'Responsive Applications',
                 'service-responsive-desc': 'Designs that adapt to any device',
@@ -471,9 +530,13 @@ class PortfolioApp {
         this.setupBackgroundAnimation();
         this.setupLanguageSelector();
         this.setupScreenshotCarousel();
+        this.setupProjectsToggle();
+        this.setupServicesAutoScroll();
+        this.setupCertificateModals();
         this.setupScrollAnimations();
         this.setupFormValidation();
         this.setupScrollToTop();
+        this.setupFooterModals();
         this.updateContent();
     }
 
@@ -610,6 +673,12 @@ class PortfolioApp {
 
         // Update section indicator position based on current section
         this.updateCurrentSectionIndicator();
+
+        const toggleBtn = document.getElementById('toggleProjectsBtn');
+        if (toggleBtn) {
+            const expanded = this.projectsExpanded || false;
+            toggleBtn.textContent = this.translations[this.currentLanguage][expanded ? 'show-less-projects' : 'show-more-projects'];
+        }
     }
 
     setupScreenshotCarousel() {
@@ -633,6 +702,153 @@ class PortfolioApp {
 
             // Start automatic rotation
             setInterval(nextSlide, 3000);
+        });
+    }
+
+    setupProjectsToggle() {
+        const projectsGrid = document.querySelector('.projects-grid');
+        const toggleBtn = document.getElementById('toggleProjectsBtn');
+        if (!projectsGrid || !toggleBtn) return;
+
+        const projectCards = Array.from(projectsGrid.querySelectorAll('.project-card'));
+        const initialVisible = 3;
+
+        const updateView = (expanded) => {
+            projectCards.forEach((card, index) => {
+                card.style.display = index < initialVisible || expanded ? 'block' : 'none';
+            });
+            toggleBtn.textContent = this.translations[this.currentLanguage][expanded ? 'show-less-projects' : 'show-more-projects'];
+        };
+
+        this.projectsExpanded = false;
+        let isExpanded = false;
+        if (projectCards.length <= initialVisible) {
+            toggleBtn.style.display = 'none';
+            return;
+        }
+
+        updateView(isExpanded);
+
+        toggleBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            this.projectsExpanded = isExpanded;
+            updateView(isExpanded);
+        });
+    }
+
+    setupServicesAutoScroll() {
+        const servicesContainer = document.querySelector('.services-grid');
+        if (!servicesContainer) return;
+
+        let scrollAmount = 0;
+        const step = 0.7;
+        const speed = 20;
+
+        const animate = () => {
+            if (servicesContainer.scrollWidth <= servicesContainer.clientWidth) {
+                return;
+            }
+            scrollAmount += step;
+            if (scrollAmount >= servicesContainer.scrollWidth - servicesContainer.clientWidth) {
+                scrollAmount = 0;
+            }
+            servicesContainer.scrollLeft = scrollAmount;
+        };
+
+        let intervalId = setInterval(animate, speed);
+
+        servicesContainer.addEventListener('mouseenter', () => {
+            clearInterval(intervalId);
+        });
+
+        servicesContainer.addEventListener('mouseleave', () => {
+            intervalId = setInterval(animate, speed);
+        });
+    }
+
+    setupFooterModals() {
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+        const modalClose = document.getElementById('modalClose');
+        const modalLinks = document.querySelectorAll('.footer-policy-link');
+
+        if (!modal || !modalTitle || !modalText || !modalClose || modalLinks.length === 0) return;
+
+        const openModal = (type) => {
+            modalTitle.textContent = this.translations[this.currentLanguage][`modal-title-${type}`];
+            modalText.textContent = this.translations[this.currentLanguage][`modal-text-${type}`];
+            modal.classList.remove('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+        };
+
+        modalLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const type = link.dataset.modal;
+                openModal(type);
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.setAttribute('aria-hidden', 'true');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+                modal.classList.add('hidden');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
+
+    setupCertificateModals() {
+        const certificateModal = document.getElementById('certificateModal');
+        const certificateTitle = document.getElementById('certificateTitle');
+        const certificateFrame = document.getElementById('certificateFrame');
+        const certificateDownload = document.getElementById('certificateDownload');
+        const certificateClose = document.getElementById('certificateClose');
+        const certificateBtns = document.querySelectorAll('.certificate-btn');
+
+        if (!certificateModal || !certificateTitle || !certificateFrame || !certificateDownload || !certificateClose || certificateBtns.length === 0) return;
+
+        const openCertificateModal = (url) => {
+            certificateTitle.textContent = this.translations[this.currentLanguage]['certificate-title'];
+            const fileUrl = url || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+            certificateFrame.src = fileUrl;
+            certificateDownload.href = fileUrl;
+            certificateModal.classList.remove('hidden');
+            certificateModal.setAttribute('aria-hidden', 'false');
+        };
+
+        certificateBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pdfUrl = btn.dataset.certificate;
+                openCertificateModal(pdfUrl);
+            });
+        });
+
+        certificateClose.addEventListener('click', () => {
+            certificateModal.classList.add('hidden');
+            certificateModal.setAttribute('aria-hidden', 'true');
+            certificateFrame.src = '';
+        });
+
+        certificateModal.addEventListener('click', (e) => {
+            if (e.target === certificateModal || e.target.classList.contains('modal-overlay')) {
+                certificateModal.classList.add('hidden');
+                certificateModal.setAttribute('aria-hidden', 'true');
+                certificateFrame.src = '';
+            }
         });
     }
 
