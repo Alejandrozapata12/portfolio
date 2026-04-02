@@ -3,11 +3,11 @@
     --primary-color: #00ff88;
     --secondary-color: #ff00aa;
     --accent-color: #8800ff;
-    --dark-bg: #0a0a0a;
+    --dark-bg: #1a1a1a;
     --darker-bg: #050505;
     --light-text: #ffffff;
     --gray-text: #cccccc;
-    --card-bg: #1a1a1a;
+    --card-bg: #2a2a2a;
     --glow-color: 0, 255, 136;
     --shadow-color: rgba(0, 255, 136, 0.3);
 }
@@ -600,6 +600,22 @@ section {
 .timeline-item p {
     color: var(--gray-text);
     font-size: 0.95rem;
+}
+
+/* Mobile responsiveness for education */
+@media (max-width: 768px) {
+    .timeline-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-item h4 {
+        font-size: 1rem;
+    }
+
+    .timeline-item p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Experience Section */
@@ -1580,6 +1596,39 @@ section {
         gap: 1.5rem;
     }
 
+    .language-selector {
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .language-selector select {
+        background: var(--card-bg);
+        color: var(--light-text);
+        border: 1px solid var(--primary-color);
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .hero-container {
         padding: 0 1rem;
     }
@@ -2000,6 +2049,7 @@ section {
         scroll-snap-type: x mandatory;
         gap: 1rem;
         padding: 1rem 0;
+        animation: none; /* Disable animation on mobile for better UX */
     }
 
     .service-card {

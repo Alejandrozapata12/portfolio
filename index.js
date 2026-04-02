@@ -544,10 +544,19 @@ class PortfolioApp {
         // Mobile menu toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
+        const overlay = document.getElementById('mobileMenuOverlay');
 
         hamburger?.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Close menu when clicking overlay
+        overlay?.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
         });
 
         // Smooth scrolling
@@ -557,8 +566,10 @@ class PortfolioApp {
                 const target = document.querySelector(anchor.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
-                    navMenu?.classList.remove('active');
+                    // Close mobile menu
                     hamburger?.classList.remove('active');
+                    navMenu?.classList.remove('active');
+                    overlay?.classList.remove('active');
                 }
             });
         });
