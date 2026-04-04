@@ -1756,15 +1756,8 @@ section {
     display: flex;
     gap: 1.5rem;
     margin-top: 3rem;
-    padding: 1rem 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    will-change: transform;
 }
 
-.services-grid:hover {
-    overflow-x: auto;
-}
 
 .service-card {
     flex: 0 0 280px;
@@ -2044,14 +2037,6 @@ section {
         padding: 4rem 0;
     }
 
-    .services-grid {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 1rem;
-        padding: 1rem 0;
-        animation: none; /* Disable animation on mobile for better UX */
-    }
-
     .service-card {
         flex: 0 0 80%;
         min-width: 80%;
@@ -2096,5 +2081,3 @@ section {
         font-size: 0.9rem;
     }
 }
-
-
