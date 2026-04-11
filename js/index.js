@@ -1,181 +1,220 @@
 class PortfolioApp {
-    constructor() {
-        this.currentLanguage = 'es';
-        this.translations = {
-            es: {
-                'nav-home': 'Inicio',
-                'nav-about': 'Sobre Mí',
-                'nav-projects': 'Proyectos',
-                'nav-skills': 'Habilidades',
-                'nav-contact': 'Contacto',
-                'nav-experience': 'Experiencia',
-                'hero-name': 'Alejandro Obando Zapata', 
-                'hero-great': 'Hola, soy',
-                'hero-title': 'Desarrollador Web FullStack',
-                'hero-desc': 'Creando experiencias digitales con tecnologías de vanguardia y soluciones innovadoras',
-                'view-work': 'Ver Mi Trabajo',
-                'get-in-touch': 'Contáctame',
-                'about-title': 'Sobre Mí',
-                'about-p1': 'Soy un desarrollador fullstack apasionado especializado en crear aplicaciones web robustas usando tecnologías modernas como React, Node.js y sistemas de bases de datos avanzados.',
-                'about-p2': 'Con extensa experiencia en la construcción de aplicaciones escalables, me enfoco en entregar experiencias de usuario excepcionales con código limpio y eficiente.',
-                'years-exp': 'Años Experiencia',
-                'projects-completed': 'Proyectos Completados',
-                'happy-clients': 'Clientes Felices',
-                'education': 'Educación',
-                'degree': 'Tecnología en Análisis y Desarrollo de Software',
-                'certification': 'Desarrollo Personal G4 - ONE - Desarrollador Frontend',
-                'projects-title': 'Proyectos Destacados',
-                'inventrack-desc': 'Sistema avanzado de gestión de inventarios con acceso multi-rol y capacidades de seguimiento en tiempo real.',
-                'ecommerce-desc': 'Plataforma completa de gestión de citas médicas y procesos medicos multi rol con integración en diferentes programas terceros.',
-                'analytics-desc': 'Página de demostración estática para el proyecto web Inventrack.',
-                'view-project': 'Ver Proyecto',
-                'skills-title': 'Habilidades',
-                'frontend': 'Desarrollo Frontend',
-                'backend': 'Desarrollo Backend',
-                'development-tools': 'Herramientas de desarrollo',
-                'level': 'Intermedio',
-                'level-sec': 'Avanzado',
-                'contact-title': 'Contáctame',
-                'name': 'Nombre',
-                'email': 'Email',
-                'message': 'Mensaje',
-                'send-message': 'Enviar Mensaje',
-                'footer-desc': 'Creando experiencias digitales con pasión y precisión',
-                'quick-links': 'Enlaces Rápidos',
-                'contact': 'Contacto',
-                'all-rights': 'Todos los derechos reservados',
-                'privacy-policy': 'Política de Privacidad',
-                'terms-conditions': 'Términos y Condiciones',
-                'modal-title-privacy': 'Política de Privacidad',
-                'modal-text-privacy': 'En AlejoDev protegemos tus datos según GDPR y normativas locales. Los datos personales se usan solo para contacto y no se venden a terceros.',
-                'modal-title-terms': 'Términos y Condiciones',
-                'modal-text-terms': 'El uso del sitio implica aceptación de las condiciones de servicio. AlejoDev no se hace responsable por decisiones tomadas basadas en la información aquí contenida.',
-                'view-certificate': 'Ver certificado',
-                'certificate-title': 'Certificado',
-                'certificate-note': 'Para ver el certificado completo, usa el botón de descarga.',
-                'download-certificate': 'Descargar certificado',
-                'terms-conditions': 'Términos y Condiciones',
-                'modal-title-privacy': 'Política de Privacidad',
-                'modal-text-privacy': 'En AlejoDev protegemos tus datos según GDPR y normativas locales. Los datos personales se usan solo para contacto y no se venden a terceros.',
-                'modal-title-terms': 'Términos y Condiciones',
-                'modal-text-terms': 'El uso del sitio implica aceptación de las condiciones de servicio. AlejoDev no se hace responsable por decisiones tomadas basadas en la información aquí contenida.',
-                'show-more-projects': 'Mostrar más',
-                'show-less-projects': 'Mostrar menos',
-                'experience-title': 'Experiencia Laboral',
-                'experience-role': 'Desarrollador Web FullStack',
-                'experience-company': 'Servicio Nacional De Aprendizaje - SENA',
-                'experience-date': '2026',
-                'experience-tools': 'Herramientas y tecnologías: HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.',
-                'experience-project': 'Proyecto: Inventrack — app web de gestión de inventarios.',
-                'experience-item-1': 'Arquitectura fullstack con API REST para gestión de productos, categorías y usuarios.',
-                'experience-item-2': 'Login seguro con roles Admin/Empleado y control de acceso a rutas.',
-                'experience-item-3': 'Dashboard dinámico con métricas en tiempo real, filtros de inventario y alertas low-stock.',
-                'experience-item-4': 'Integración de la base de datos MySQL con migraciones y consultas optimizadas.',
-                'experience-item-5': 'Interfaz responsive y animaciones tipo neon en componentes clave.',
-                'services-title': 'Servicios Profesionales',
-                'service-web-dev': 'Desarrollo Web FullStack',
-                'service-web-desc': 'Aplicaciones completas con backend y frontend integrados',
-                'service-responsive': 'Aplicaciones Responsivas',
-                'service-responsive-desc': 'Diseños que se adaptan a cualquier dispositivo',
-                'service-database': 'Integración de Bases de Datos',
-                'service-database-desc': 'Sistemas robustos con MySQL.',
-                'cta-title': '¿Listo para tu próximo proyecto?',
-                'cta-subtitle': 'Trabajemos juntos para crear algo increíble',
-                'cta-button': 'Comenzar Proyecto',
-                'service-data': 'Análisis de datos',
-                'service-data-desc': 'Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.',
-                'show-more': 'Conozca más',
-                'analytics-appo': 'Langing Page del proyecto AppointmentPro'
+  constructor() {
+    this.currentLanguage = "es";
+    this.translations = {
+      es: {
+        "nav-home": "Inicio",
+        "nav-about": "Sobre Mí",
+        "nav-projects": "Proyectos",
+        "nav-skills": "Habilidades",
+        "nav-contact": "Contacto",
+        "nav-experience": "Experiencia",
+        "hero-name": "Alejandro Obando Zapata",
+        "hero-great": "Hola, soy",
+        "hero-title": "Desarrollador Web FullStack",
+        "hero-desc":
+          "Creando experiencias digitales con tecnologías de vanguardia y soluciones innovadoras",
+        "view-work": "Ver Mi Trabajo",
+        "get-in-touch": "Contáctame",
+        "about-title": "Sobre Mí",
+        "about-p1":
+          "Soy un desarrollador fullstack apasionado especializado en crear aplicaciones web robustas usando tecnologías modernas como React, Node.js y sistemas de bases de datos avanzados.",
+        "about-p2":
+          "Con extensa experiencia en la construcción de aplicaciones escalables, me enfoco en entregar experiencias de usuario excepcionales con código limpio y eficiente.",
+        "years-exp": "Años Experiencia",
+        "projects-completed": "Proyectos Completados",
+        "happy-clients": "Clientes Felices",
+        education: "Educación",
+        degree: "Tecnología en Análisis y Desarrollo de Software",
+        certification: "Desarrollo Personal G4 - ONE - Desarrollador Frontend",
+        "projects-title": "Proyectos Destacados",
+        "inventrack-desc":
+          "Sistema avanzado de gestión de inventarios con acceso multi-rol y capacidades de seguimiento en tiempo real.",
+        "ecommerce-desc":
+          "Plataforma completa de gestión de citas médicas y procesos medicos multi rol con integración en diferentes programas terceros.",
+        "analytics-desc":
+          "Página de demostración estática para el proyecto web Inventrack.",
+        "view-project": "Ver Proyecto",
+        "skills-title": "Habilidades",
+        frontend: "Desarrollo Frontend",
+        backend: "Desarrollo Backend",
+        "development-tools": "Herramientas de desarrollo",
+        level: "Intermedio",
+        "level-sec": "Avanzado",
+        "contact-title": "Contáctame",
+        name: "Nombre",
+        email: "Email",
+        message: "Mensaje",
+        "send-message": "Enviar Mensaje",
+        "footer-desc": "Creando experiencias digitales con pasión y precisión",
+        "quick-links": "Enlaces Rápidos",
+        contact: "Contacto",
+        "all-rights": "Todos los derechos reservados",
+        "privacy-policy": "Política de Privacidad",
+        "terms-conditions": "Términos y Condiciones",
+        "modal-title-privacy": "Política de Privacidad",
+        "modal-text-privacy":
+          "En AlejoDev protegemos tus datos según GDPR y normativas locales. Los datos personales se usan solo para contacto y no se venden a terceros.",
+        "modal-title-terms": "Términos y Condiciones",
+        "modal-text-terms":
+          "El uso del sitio implica aceptación de las condiciones de servicio. AlejoDev no se hace responsable por decisiones tomadas basadas en la información aquí contenida.",
+        "view-certificate": "Ver certificado",
+        "certificate-title": "Certificado",
+        "certificate-note":
+          "Para ver el certificado completo, usa el botón de descarga.",
+        "download-certificate": "Descargar certificado",
+        "terms-conditions": "Términos y Condiciones",
+        "modal-title-privacy": "Política de Privacidad",
+        "modal-text-privacy":
+          "En AlejoDev protegemos tus datos según GDPR y normativas locales. Los datos personales se usan solo para contacto y no se venden a terceros.",
+        "modal-title-terms": "Términos y Condiciones",
+        "modal-text-terms":
+          "El uso del sitio implica aceptación de las condiciones de servicio. AlejoDev no se hace responsable por decisiones tomadas basadas en la información aquí contenida.",
+        "show-more-projects": "Mostrar más",
+        "show-less-projects": "Mostrar menos",
+        "experience-title": "Experiencia Laboral",
+        "experience-role": "Desarrollador Web FullStack",
+        "experience-company": "Servicio Nacional De Aprendizaje - SENA",
+        "experience-date": "2026",
+        "experience-tools":
+          "Herramientas y tecnologías: HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.",
+        "experience-project":
+          "Proyecto: Inventrack — app web de gestión de inventarios.",
+        "experience-item-1":
+          "Arquitectura fullstack con API REST para gestión de productos, categorías y usuarios.",
+        "experience-item-2":
+          "Login seguro con roles Admin/Empleado y control de acceso a rutas.",
+        "experience-item-3":
+          "Dashboard dinámico con métricas en tiempo real, filtros de inventario y alertas low-stock.",
+        "experience-item-4":
+          "Integración de la base de datos MySQL con migraciones y consultas optimizadas.",
+        "experience-item-5":
+          "Interfaz responsive y animaciones tipo neon en componentes clave.",
+        "services-title": "Servicios Profesionales",
+        "service-web-dev": "Desarrollo Web FullStack",
+        "service-web-desc":
+          "Aplicaciones completas con backend y frontend integrados",
+        "service-responsive": "Aplicaciones Responsivas",
+        "service-responsive-desc":
+          "Diseños que se adaptan a cualquier dispositivo",
+        "service-database": "Integración de Bases de Datos",
+        "service-database-desc": "Sistemas robustos con MySQL.",
+        "cta-title": "¿Listo para tu próximo proyecto?",
+        "cta-subtitle": "Trabajemos juntos para crear algo increíble",
+        "cta-button": "Comenzar Proyecto",
+        "service-data": "Análisis de datos",
+        "service-data-desc":
+          "Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.",
+        "show-more": "Conozca más",
+        "analytics-appo": "Langing Page del proyecto AppointmentPro",
+      },
+      en: {
+        "nav-home": "Home",
+        "nav-about": "About me",
+        "nav-projects": "Projects",
+        "nav-skills": "Skills",
+        "nav-contact": "Contact",
+        "nav-experience": "Experience",
+        "hero-name": "Alejandro Obando Zapata",
+        "hero-great": "Hello, I'm",
+        "hero-title": "FullStack Web Developer",
+        "hero-desc":
+          "Crafting digital experiences with cutting-edge technologies and innovative solutions",
+        "view-work": "View My Work",
+        "get-in-touch": "Get In Touch",
+        "about-title": "About Me",
+        "about-p1":
+          "I'm a passionate fullstack developer specializing in creating robust web applications using modern technologies like React, Node.js, and advanced database systems.",
+        "about-p2":
+          "With extensive experience in building scalable applications, I focus on delivering exceptional user experiences with clean, efficient code and innovative solutions.",
+        "years-exp": "Years Experience",
+        "projects-completed": "Projects Completed",
+        "happy-clients": "Happy Clients",
+        education: "Education",
+        degree: "Tecnologys in Software Analysis and Development",
+        certification: "Personal Development G4 - ONE - Frontend Development",
+        "projects-title": "Featured Projects",
+        "inventrack-desc":
+          "Advanced inventory management system with multi-role access and real-time tracking capabilities.",
+        "ecommerce-desc":
+          "Comprehensive platform for managing medical appointments and multi-role medical processes with integration into various third-party programs.",
+        "analytics-desc": "Static demo page for the Inventrack web project.",
+        "view-project": "View Project",
+        "skills-title": "Skills",
+        frontend: "Frontend Development",
+        backend: "backend Development",
+        "development-tools": "Development Tools",
+        level: "Intermediate",
+        "level-sec": "Expert",
+        "contact-title": "Get In Touch",
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        "send-message": "Send Message",
+        "footer-desc":
+          "Crafting digital experiences with passion and precision",
+        "quick-links": "Quick Links",
+        contact: "Contact",
+        "all-rights": "All rights reserved",
+        "privacy-policy": "Privacy Policy",
+        "terms-conditions": "Terms & Conditions",
+        "modal-title-privacy": "Privacy Policy",
+        "modal-text-privacy":
+          "At AlejoDev we protect your data according to GDPR and local standards. Personal data is used only for contact and is not sold to third parties.",
+        "modal-title-terms": "Terms & Conditions",
+        "modal-text-terms":
+          "Using this site implies acceptance of the terms of service. AlejoDev is not responsible for decisions made based on the contained information.",
+        "view-certificate": "View Certificate",
+        "certificate-title": "Certificate",
+        "certificate-note":
+          "To view the full certificate, use the download button.",
+        "download-certificate": "Download Certificate",
+        "terms-conditions": "Terms & Conditions",
+        "modal-title-privacy": "Privacy Policy",
+        "modal-text-privacy":
+          "At AlejoDev we protect your data according to GDPR and local standards. Personal data is used only for contact and is not sold to third parties.",
+        "modal-title-terms": "Terms & Conditions",
+        "modal-text-terms":
+          "Using this site implies acceptance of the terms of service. AlejoDev is not responsible for decisions made based on the contained information.",
+        "show-more-projects": "Show More",
+        "show-less-projects": "Show Less",
+        "experience-title": "Work Experience",
+        "experience-role": "FullStack Web Developer",
+        "experience-company": "Servicio Nacional De Aprendizaje - SENA",
+        "experience-date": "2026",
+        "experience-tools":
+          "Tools and technologies: HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.",
+        "experience-project":
+          "Project: Inventrack — inventory management web app.",
+        "experience-item-1":
+          "Fullstack architecture with REST API for products, categories, and users management.",
+        "experience-item-2":
+          "Secure login with Admin/Employee roles and route access control.",
+        "experience-item-3":
+          "Dynamic dashboard with real-time metrics, inventory filters, and low-stock alerts.",
+        "experience-item-4":
+          "MySQL database integration with migrations and optimized queries.",
+        "experience-item-5":
+          "Responsive interface and neon-style animations in key components.",
+        "services-title": "Professional Services",
+        "service-web-dev": "FullStack Web Development",
 
-
-            },
-            en: {
-                'nav-home': 'Home',
-                'nav-about': 'About me',
-                'nav-projects': 'Projects',
-                'nav-skills': 'Skills',
-                'nav-contact': 'Contact',
-                'nav-experience': 'Experience',
-                'hero-name': 'Alejandro Obando Zapata',
-                'hero-great': 'Hello, I\'m',
-                'hero-title': 'FullStack Web Developer',
-                'hero-desc': 'Crafting digital experiences with cutting-edge technologies and innovative solutions',
-                'view-work': 'View My Work',
-                'get-in-touch': 'Get In Touch',
-                'about-title': 'About Me',
-                'about-p1': 'I\'m a passionate fullstack developer specializing in creating robust web applications using modern technologies like React, Node.js, and advanced database systems.',
-                'about-p2': 'With extensive experience in building scalable applications, I focus on delivering exceptional user experiences with clean, efficient code and innovative solutions.',
-                'years-exp': 'Years Experience',
-                'projects-completed': 'Projects Completed',
-                'happy-clients': 'Happy Clients',
-                'education': 'Education',
-                'degree': 'Tecnologys in Software Analysis and Development',
-                'certification': 'Personal Development G4 - ONE - Frontend Development',
-                'projects-title': 'Featured Projects',
-                'inventrack-desc': 'Advanced inventory management system with multi-role access and real-time tracking capabilities.',
-                'ecommerce-desc': 'Comprehensive platform for managing medical appointments and multi-role medical processes with integration into various third-party programs.',
-                'analytics-desc': 'Static demo page for the Inventrack web project.',
-                'view-project': 'View Project',
-                'skills-title': 'Skills',
-                'frontend': 'Frontend Development',
-                'backend': 'backend Development',
-                'development-tools': 'Development Tools',
-                'level': 'Intermediate',
-                'level-sec': 'Expert',
-                'contact-title': 'Get In Touch',
-                'name': 'Name',
-                'email': 'Email',
-                'message': 'Message',
-                'send-message': 'Send Message',
-                'footer-desc': 'Crafting digital experiences with passion and precision',
-                'quick-links': 'Quick Links',
-                'contact': 'Contact',
-                'all-rights': 'All rights reserved',
-                'privacy-policy': 'Privacy Policy',
-                'terms-conditions': 'Terms & Conditions',
-                'modal-title-privacy': 'Privacy Policy',
-                'modal-text-privacy': 'At AlejoDev we protect your data according to GDPR and local standards. Personal data is used only for contact and is not sold to third parties.',
-                'modal-title-terms': 'Terms & Conditions',
-                'modal-text-terms': 'Using this site implies acceptance of the terms of service. AlejoDev is not responsible for decisions made based on the contained information.',
-                'view-certificate': 'View Certificate',
-                'certificate-title': 'Certificate',
-                'certificate-note': 'To view the full certificate, use the download button.',
-                'download-certificate': 'Download Certificate',
-                'terms-conditions': 'Terms & Conditions',
-                'modal-title-privacy': 'Privacy Policy',
-                'modal-text-privacy': 'At AlejoDev we protect your data according to GDPR and local standards. Personal data is used only for contact and is not sold to third parties.',
-                'modal-title-terms': 'Terms & Conditions',
-                'modal-text-terms': 'Using this site implies acceptance of the terms of service. AlejoDev is not responsible for decisions made based on the contained information.',
-                'show-more-projects': 'Show More',
-                'show-less-projects': 'Show Less',
-                'experience-title': 'Work Experience',
-                'experience-role': 'FullStack Web Developer',
-                'experience-company': 'Servicio Nacional De Aprendizaje - SENA',
-                'experience-date': '2026',
-                'experience-tools': 'Tools and technologies: HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.',
-                'experience-project': 'Project: Inventrack — inventory management web app.',
-                'experience-item-1': 'Fullstack architecture with REST API for products, categories, and users management.',
-                'experience-item-2': 'Secure login with Admin/Employee roles and route access control.',
-                'experience-item-3': 'Dynamic dashboard with real-time metrics, inventory filters, and low-stock alerts.',
-                'experience-item-4': 'MySQL database integration with migrations and optimized queries.',
-                'experience-item-5': 'Responsive interface and neon-style animations in key components.',
-                'services-title': 'Professional Services',
-                'service-web-dev': 'FullStack Web Development',
-
-                'service-web-desc': 'Complete applications with integrated backend and frontend',
-                'service-responsive': 'Responsive Applications',
-                'service-responsive-desc': 'Designs that adapt to any device',
-                'service-database': 'Database Integration',
-                'service-database-desc': 'Robust systems with MySQL.',
-                'cta-title': 'Ready for your next project?',
-                'cta-subtitle': "Let's work together to create something amazing",
-                'cta-button': 'Start Project',
-                'service-data': 'Data analysis',
-                'service-data-desc': 'Professional and optimal data analysis, using the best tools in the industry.',
-                'show-more': 'Learn more',
-                'analytics-appo': 'Landing page for AppointmentPro project'
-            }
-            /*
+        "service-web-desc":
+          "Complete applications with integrated backend and frontend",
+        "service-responsive": "Responsive Applications",
+        "service-responsive-desc": "Designs that adapt to any device",
+        "service-database": "Database Integration",
+        "service-database-desc": "Robust systems with MySQL.",
+        "cta-title": "Ready for your next project?",
+        "cta-subtitle": "Let's work together to create something amazing",
+        "cta-button": "Start Project",
+        "service-data": "Data analysis",
+        "service-data-desc":
+          "Professional and optimal data analysis, using the best tools in the industry.",
+        "show-more": "Learn more",
+        "analytics-appo": "Landing page for AppointmentPro project",
+      },
+      /*
             de: {
                 'nav-home': 'Startseite',
                 'nav-about': 'Über Mich',
@@ -520,366 +559,483 @@ class PortfolioApp {
                 'cta-button': 'プロジェクト開始'
             }
                 */
-        };
+    };
 
-        this.init();
+    this.init();
+  }
+
+  init() {
+    this.setupEventListeners();
+    this.setupBackgroundAnimation();
+    this.setupLanguageSelector();
+    this.setupScreenshotCarousel();
+    this.setupProjectsToggle();
+    this.setupServicesAutoScroll();
+    this.setupCertificateModals();
+    this.setupScrollAnimations();
+    this.setupFormValidation();
+    this.setupScrollToTop();
+    this.setupFooterModals();
+    this.updateContent();
+  }
+
+  setupEventListeners() {
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    const overlay = document.getElementById("mobileMenuOverlay");
+
+    hamburger?.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    // Close menu when clicking overlay
+    overlay?.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+          // Close mobile menu
+          hamburger?.classList.remove("active");
+          navMenu?.classList.remove("active");
+          overlay?.classList.remove("active");
+        }
+      });
+    });
+  }
+
+  setupBackgroundAnimation() {
+    const canvas = document.getElementById("backgroundCanvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const particleCount = 50;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.random() * 0.5})`;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+      }
+
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
 
-    init() {
-        this.setupEventListeners();
-        this.setupBackgroundAnimation();
-        this.setupLanguageSelector();
-        this.setupScreenshotCarousel();
-        this.setupProjectsToggle();
-        this.setupServicesAutoScroll();
-        this.setupCertificateModals();
-        this.setupScrollAnimations();
-        this.setupFormValidation();
-        this.setupScrollToTop();
-        this.setupFooterModals();
+    function initParticles() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        // Draw connections between close particles
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.strokeStyle = `rgba(0, 255, 136, ${0.2 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    initParticles();
+    animate();
+  }
+
+  setupLanguageSelector() {
+    const languageSelect = document.getElementById("languageSelect");
+    if (languageSelect) {
+      languageSelect.addEventListener("change", (e) => {
+        this.currentLanguage = e.target.value;
         this.updateContent();
+        localStorage.setItem("preferredLanguage", this.currentLanguage);
+      });
+
+      // Load saved language preference
+      const savedLanguage = localStorage.getItem("preferredLanguage");
+      if (savedLanguage && this.translations[savedLanguage]) {
+        this.currentLanguage = savedLanguage;
+        languageSelect.value = savedLanguage;
+      }
+    }
+  }
+
+  updateContent() {
+    const elements = document.querySelectorAll("[data-lang]");
+    elements.forEach((element) => {
+      const key = element.getAttribute("data-lang");
+      const translation = this.translations[this.currentLanguage]?.[key];
+      if (translation) {
+        element.textContent = translation;
+      }
+    });
+
+    // Update section indicator position based on current section
+    this.updateCurrentSectionIndicator();
+
+    const toggleBtn = document.getElementById("toggleProjectsBtn");
+    if (toggleBtn) {
+      const expanded = this.projectsExpanded || false;
+      toggleBtn.textContent =
+        this.translations[this.currentLanguage][
+          expanded ? "show-less-projects" : "show-more-projects"
+        ];
+    }
+  }
+
+  setupScreenshotCarousel() {
+    const carousels = document.querySelectorAll(".screenshot-carousel");
+    carousels.forEach((carousel) => {
+      const slides = carousel.querySelectorAll(".carousel-slide");
+      if (slides.length <= 1) return;
+
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      // Start automatic rotation
+      setInterval(nextSlide, 3000);
+    });
+  }
+
+  setupProjectsToggle() {
+    const projectsGrid = document.querySelector(".projects-grid");
+    const toggleBtn = document.getElementById("toggleProjectsBtn");
+    if (!projectsGrid || !toggleBtn) return;
+
+    const projectCards = Array.from(
+      projectsGrid.querySelectorAll(".project-card"),
+    );
+    const initialVisible = 3;
+
+    const updateView = (expanded) => {
+      projectCards.forEach((card, index) => {
+        card.style.display =
+          index < initialVisible || expanded ? "block" : "none";
+      });
+      toggleBtn.textContent =
+        this.translations[this.currentLanguage][
+          expanded ? "show-less-projects" : "show-more-projects"
+        ];
+    };
+
+    this.projectsExpanded = false;
+    let isExpanded = false;
+    if (projectCards.length <= initialVisible) {
+      toggleBtn.style.display = "none";
+      return;
     }
 
-    setupEventListeners() {
-        // Mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        const overlay = document.getElementById('mobileMenuOverlay');
+    updateView(isExpanded);
 
-        hamburger?.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-        });
+    toggleBtn.addEventListener("click", () => {
+      isExpanded = !isExpanded;
+      this.projectsExpanded = isExpanded;
+      toggleBtn.classList.toggle("expanded", isExpanded);
+      updateView(isExpanded);
+      if (!isExpanded) {
+        projectsGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
 
-        // Close menu when clicking overlay
-        overlay?.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-            overlay.classList.remove('active');
-        });
+  setupServicesAutoScroll() {
+  const container = document.querySelector('.services-grid');
+  if (!container) return;
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    // Close mobile menu
-                    hamburger?.classList.remove('active');
-                    navMenu?.classList.remove('active');
-                    overlay?.classList.remove('active');
-                }
-            });
-        });
-    }
+  const isMobile = () => window.innerWidth <= 768;
+  if (!isMobile()) return;
 
-    setupBackgroundAnimation() {
-        const canvas = document.getElementById('backgroundCanvas');
-        if (!canvas) return;
+  const cards = Array.from(container.querySelectorAll('.service-card'));
+  if (cards.length === 0) return;
 
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+  // Crear dots indicadores
+  const dotsWrapper = document.createElement('div');
+  dotsWrapper.className = 'services-dots';
+  cards.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'services-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToCard(i));
+    dotsWrapper.appendChild(dot);
+  });
+  container.parentElement.appendChild(dotsWrapper);
 
-        const particles = [];
-        const particleCount = 50;
+  let currentIndex = 0;
+  let autoInterval = null;
+  let isUserScrolling = false;
+  let userScrollTimer = null;
 
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = (Math.random() - 0.5) * 0.5;
-                this.speedY = (Math.random() - 0.5) * 0.5;
-                this.color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.random() * 0.5})`;
-            }
+  const dots = dotsWrapper.querySelectorAll('.services-dot');
 
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
+  function updateDots(index) {
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }
 
-                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
-                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
-            }
+  function goToCard(index) {
+    currentIndex = index;
+    const card = cards[index];
+    container.scrollTo({
+      left: card.offsetLeft - (container.clientWidth - card.offsetWidth) / 2,
+      behavior: 'smooth'
+    });
+    updateDots(index);
+  }
 
-            draw() {
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
+  function nextCard() {
+    const next = (currentIndex + 1) % cards.length;
+    goToCard(next);
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoInterval = setInterval(nextCard, 3000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoInterval);
+    autoInterval = null;
+  }
+
+  // Detectar cuál card está visible con IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    if (isUserScrolling) return;
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+        const idx = cards.indexOf(entry.target);
+        if (idx !== -1 && idx !== currentIndex) {
+          currentIndex = idx;
+          updateDots(idx);
         }
+      }
+    });
+  }, {
+    root: container,
+    threshold: 0.6
+  });
 
-        function initParticles() {
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
+  cards.forEach(card => observer.observe(card));
+
+  // Pausar auto cuando el usuario toca
+  container.addEventListener('touchstart', () => {
+    isUserScrolling = true;
+    stopAuto();
+    clearTimeout(userScrollTimer);
+  }, { passive: true });
+
+  container.addEventListener('touchend', () => {
+    clearTimeout(userScrollTimer);
+    userScrollTimer = setTimeout(() => {
+      isUserScrolling = false;
+      // Snap al card más cercano
+      const centerX = container.scrollLeft + container.clientWidth / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      cards.forEach((card, i) => {
+        const dist = Math.abs(card.offsetLeft + card.offsetWidth / 2 - centerX);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      goToCard(closest);
+      startAuto();
+    }, 300);
+  }, { passive: true });
+
+  // Reiniciar si cambia tamaño
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      stopAuto();
+      dotsWrapper.remove();
+    }
+  });
+
+  startAuto();
+}
+
+  setupFooterModals() {
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const modalClose = document.getElementById("modalClose");
+    const modalLinks = document.querySelectorAll(".footer-policy-link");
+
+    if (
+      !modal ||
+      !modalTitle ||
+      !modalText ||
+      !modalClose ||
+      modalLinks.length === 0
+    )
+      return;
+
+    const openModal = (type) => {
+      modalTitle.textContent =
+        this.translations[this.currentLanguage][`modal-title-${type}`];
+      modalText.textContent =
+        this.translations[this.currentLanguage][`modal-text-${type}`];
+      modal.classList.remove("hidden");
+      modal.setAttribute("aria-hidden", "false");
+    };
+
+    modalLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const type = link.dataset.modal;
+        openModal(type);
+      });
+    });
+
+    modalClose.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.setAttribute("aria-hidden", "true");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal || e.target.classList.contains("modal-overlay")) {
+        modal.classList.add("hidden");
+        modal.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        modal.classList.add("hidden");
+        modal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
+  setupCertificateModals() {
+    const certificateModal = document.getElementById("certificateModal");
+    const certificateTitle = document.getElementById("certificateTitle");
+    const certificateFrame = document.getElementById("certificateFrame");
+    const certificateDownload = document.getElementById("certificateDownload");
+    const certificateClose = document.getElementById("certificateClose");
+    const certificateBtns = document.querySelectorAll(".certificate-btn");
+
+    if (
+      !certificateModal ||
+      !certificateTitle ||
+      !certificateFrame ||
+      !certificateDownload ||
+      !certificateClose ||
+      certificateBtns.length === 0
+    )
+      return;
+
+    const openCertificateModal = (url) => {
+      certificateTitle.textContent =
+        this.translations[this.currentLanguage]["certificate-title"];
+      const fileUrl =
+        url ||
+        "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+      certificateFrame.src = fileUrl;
+      certificateDownload.href = fileUrl;
+      certificateModal.classList.remove("hidden");
+      certificateModal.setAttribute("aria-hidden", "false");
+    };
+
+    certificateBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const pdfUrl = btn.dataset.certificate;
+        openCertificateModal(pdfUrl);
+      });
+    });
+
+    certificateClose.addEventListener("click", () => {
+      certificateModal.classList.add("hidden");
+      certificateModal.setAttribute("aria-hidden", "true");
+      certificateFrame.src = "";
+    });
+
+    certificateModal.addEventListener("click", (e) => {
+      if (
+        e.target === certificateModal ||
+        e.target.classList.contains("modal-overlay")
+      ) {
+        certificateModal.classList.add("hidden");
+        certificateModal.setAttribute("aria-hidden", "true");
+        certificateFrame.src = "";
+      }
+    });
+  }
+
+  setupScrollAnimations() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
         }
+      });
+    }, observerOptions);
 
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-
-                // Draw connections between close particles
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 100) {
-                        ctx.strokeStyle = `rgba(0, 255, 136, ${0.2 * (1 - distance / 100)})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-
-            requestAnimationFrame(animate);
-        }
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        initParticles();
-        animate();
-    }
-
-    setupLanguageSelector() {
-        const languageSelect = document.getElementById('languageSelect');
-        if (languageSelect) {
-            languageSelect.addEventListener('change', (e) => {
-                this.currentLanguage = e.target.value;
-                this.updateContent();
-                localStorage.setItem('preferredLanguage', this.currentLanguage);
-            });
-
-            // Load saved language preference
-            const savedLanguage = localStorage.getItem('preferredLanguage');
-            if (savedLanguage && this.translations[savedLanguage]) {
-                this.currentLanguage = savedLanguage;
-                languageSelect.value = savedLanguage;
-            }
-        }
-    }
-
-    updateContent() {
-        const elements = document.querySelectorAll('[data-lang]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-lang');
-            const translation = this.translations[this.currentLanguage]?.[key];
-            if (translation) {
-                element.textContent = translation;
-            }
-        });
-
-        // Update section indicator position based on current section
-        this.updateCurrentSectionIndicator();
-
-        const toggleBtn = document.getElementById('toggleProjectsBtn');
-        if (toggleBtn) {
-            const expanded = this.projectsExpanded || false;
-            toggleBtn.textContent = this.translations[this.currentLanguage][expanded ? 'show-less-projects' : 'show-more-projects'];
-        }
-    }
-
-    setupScreenshotCarousel() {
-        const carousels = document.querySelectorAll('.screenshot-carousel');
-        carousels.forEach(carousel => {
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            if (slides.length <= 1) return;
-
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.toggle('active', i === index);
-                });
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                showSlide(currentIndex);
-            }
-
-            // Start automatic rotation
-            setInterval(nextSlide, 3000);
-        });
-    }
-
-    setupProjectsToggle() {
-        const projectsGrid = document.querySelector('.projects-grid');
-        const toggleBtn = document.getElementById('toggleProjectsBtn');
-        if (!projectsGrid || !toggleBtn) return;
-
-        const projectCards = Array.from(projectsGrid.querySelectorAll('.project-card'));
-        const initialVisible = 3;
-
-        const updateView = (expanded) => {
-            projectCards.forEach((card, index) => {
-                card.style.display = index < initialVisible || expanded ? 'block' : 'none';
-            });
-            toggleBtn.textContent = this.translations[this.currentLanguage][expanded ? 'show-less-projects' : 'show-more-projects'];
-        };
-
-        this.projectsExpanded = false;
-        let isExpanded = false;
-        if (projectCards.length <= initialVisible) {
-            toggleBtn.style.display = 'none';
-            return;
-        }
-
-        updateView(isExpanded);
-
-        toggleBtn.addEventListener('click', () => {
-            isExpanded = !isExpanded;
-            this.projectsExpanded = isExpanded;
-            updateView(isExpanded);
-        });
-    }
-
-    setupServicesAutoScroll() {
-        const servicesContainer = document.querySelector('.services-grid');
-        if (!servicesContainer) return;
-
-        let scrollAmount = 0;
-        const step = 0.7;
-        const speed = 20;
-
-        const animate = () => {
-            if (servicesContainer.scrollWidth <= servicesContainer.clientWidth) {
-                return;
-            }
-            scrollAmount += step;
-            if (scrollAmount >= servicesContainer.scrollWidth - servicesContainer.clientWidth) {
-                scrollAmount = 0;
-            }
-            servicesContainer.scrollLeft = scrollAmount;
-        };
-
-        let intervalId = setInterval(animate, speed);
-
-        servicesContainer.addEventListener('mouseenter', () => {
-            clearInterval(intervalId);
-        });
-
-        servicesContainer.addEventListener('mouseleave', () => {
-            intervalId = setInterval(animate, speed);
-        });
-    }
-
-    setupFooterModals() {
-        const modal = document.getElementById('modal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalText = document.getElementById('modalText');
-        const modalClose = document.getElementById('modalClose');
-        const modalLinks = document.querySelectorAll('.footer-policy-link');
-
-        if (!modal || !modalTitle || !modalText || !modalClose || modalLinks.length === 0) return;
-
-        const openModal = (type) => {
-            modalTitle.textContent = this.translations[this.currentLanguage][`modal-title-${type}`];
-            modalText.textContent = this.translations[this.currentLanguage][`modal-text-${type}`];
-            modal.classList.remove('hidden');
-            modal.setAttribute('aria-hidden', 'false');
-        };
-
-        modalLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const type = link.dataset.modal;
-                openModal(type);
-            });
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            modal.setAttribute('aria-hidden', 'true');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal || e.target.classList.contains('modal-overlay')) {
-                modal.classList.add('hidden');
-                modal.setAttribute('aria-hidden', 'true');
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                modal.classList.add('hidden');
-                modal.setAttribute('aria-hidden', 'true');
-            }
-        });
-    }
-
-    setupCertificateModals() {
-        const certificateModal = document.getElementById('certificateModal');
-        const certificateTitle = document.getElementById('certificateTitle');
-        const certificateFrame = document.getElementById('certificateFrame');
-        const certificateDownload = document.getElementById('certificateDownload');
-        const certificateClose = document.getElementById('certificateClose');
-        const certificateBtns = document.querySelectorAll('.certificate-btn');
-
-        if (!certificateModal || !certificateTitle || !certificateFrame || !certificateDownload || !certificateClose || certificateBtns.length === 0) return;
-
-        const openCertificateModal = (url) => {
-            certificateTitle.textContent = this.translations[this.currentLanguage]['certificate-title'];
-            const fileUrl = url || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
-            certificateFrame.src = fileUrl;
-            certificateDownload.href = fileUrl;
-            certificateModal.classList.remove('hidden');
-            certificateModal.setAttribute('aria-hidden', 'false');
-        };
-
-        certificateBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pdfUrl = btn.dataset.certificate;
-                openCertificateModal(pdfUrl);
-            });
-        });
-
-        certificateClose.addEventListener('click', () => {
-            certificateModal.classList.add('hidden');
-            certificateModal.setAttribute('aria-hidden', 'true');
-            certificateFrame.src = '';
-        });
-
-        certificateModal.addEventListener('click', (e) => {
-            if (e.target === certificateModal || e.target.classList.contains('modal-overlay')) {
-                certificateModal.classList.add('hidden');
-                certificateModal.setAttribute('aria-hidden', 'true');
-                certificateFrame.src = '';
-            }
-        });
-    }
-
-    setupScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Elements to animate
-        const animateElements = document.querySelectorAll(`
+    // Elements to animate
+    const animateElements = document.querySelectorAll(`
             .project-card, 
             .skill-category, 
             .info-item, 
@@ -889,56 +1045,58 @@ class PortfolioApp {
             .about-text
         `);
 
-        animateElements.forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(element);
-        });
+    animateElements.forEach((element) => {
+      element.style.opacity = "0";
+      element.style.transform = "translateY(30px)";
+      element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+      observer.observe(element);
+    });
 
-        // Update current section indicator on scroll
-        window.addEventListener('scroll', () => {
-            this.updateCurrentSectionIndicator();
-        });
-    }
+    // Update current section indicator on scroll
+    window.addEventListener("scroll", () => {
+      this.updateCurrentSectionIndicator();
+    });
+  }
 
-    updateCurrentSectionIndicator() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-list a');
-        const indicator = document.querySelector('.current-section-indicator');
+  updateCurrentSectionIndicator() {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-list a");
+    const indicator = document.querySelector(".current-section-indicator");
 
-        if (!indicator) return;
+    if (!indicator) return;
 
-        const scrollPos = window.scrollY + 100; // Ajusta este valor según necesites
+    const scrollPos = window.scrollY + 100; // Ajusta este valor según necesites
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
 
-            // Calcula el rango donde la sección está activa
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                const link = document.querySelector(`.nav-list a[data-section="${sectionId}"]`);
-                if (link) {
-                    // Remueve la clase active de todos los links
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    // Agrega la clase active al link correspondiente
-                    link.classList.add('active');
+      // Calcula el rango donde la sección está activa
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        const link = document.querySelector(
+          `.nav-list a[data-section="${sectionId}"]`,
+        );
+        if (link) {
+          // Remueve la clase active de todos los links
+          navLinks.forEach((l) => l.classList.remove("active"));
+          // Agrega la clase active al link correspondiente
+          link.classList.add("active");
 
-                    // Actualiza la posición del indicador
-                    const linkRect = link.getBoundingClientRect();
-                    const navContainer = document.querySelector('.nav-container');
-                    const navRect = navContainer.getBoundingClientRect();
+          // Actualiza la posición del indicador
+          const linkRect = link.getBoundingClientRect();
+          const navContainer = document.querySelector(".nav-container");
+          const navRect = navContainer.getBoundingClientRect();
 
-                    // Calcula la posición relativa al contenedor del navbar
-                    indicator.style.width = `${linkRect.width}px`;
-                    indicator.style.left = `${linkRect.left - navRect.left}px`;
-                }
-            }
-        });
-    }
+          // Calcula la posición relativa al contenedor del navbar
+          indicator.style.width = `${linkRect.width}px`;
+          indicator.style.left = `${linkRect.left - navRect.left}px`;
+        }
+      }
+    });
+  }
 
-    /*
+  /*
     setupFormValidation() {
         const form = document.getElementById('contactForm');
         if (!form) return;
@@ -961,49 +1119,49 @@ class PortfolioApp {
     }
 
     */
-    setupScrollToTop() {
-        const scrollTopBtn = document.getElementById('scrollTop');
-        if (!scrollTopBtn) return;
+  setupScrollToTop() {
+    const scrollTopBtn = document.getElementById("scrollTop");
+    if (!scrollTopBtn) return;
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add("visible");
+      } else {
+        scrollTopBtn.classList.remove("visible");
+      }
+    });
 
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
+  scrollToSection(sectionId) {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
-
-    scrollToSection(sectionId) {
-        const element = document.querySelector(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
+  }
 }
 
 // Initialize the portfolio app when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new PortfolioApp();
+document.addEventListener("DOMContentLoaded", () => {
+  new PortfolioApp();
 });
 
 // Additional utility functions
 function changeLanguage() {
-    // This function is called from the HTML select onchange event
-    // The main logic is handled in the PortfolioApp class
+  // This function is called from the HTML select onchange event
+  // The main logic is handled in the PortfolioApp class
 }
 
 function scrollToSection(sectionId) {
-    // Global function for smooth scrolling
-    const element = document.querySelector(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
+  // Global function for smooth scrolling
+  const element = document.querySelector(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 }
