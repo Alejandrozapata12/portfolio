@@ -107,6 +107,7 @@ class PortfolioApp {
           "Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.",
         "show-more": "Conozca más",
         "analytics-appo": "Langing Page del proyecto AppointmentPro",
+        'code-title': 'developer.profile()'
       },
       en: {
         "nav-home": "Home",
@@ -213,6 +214,7 @@ class PortfolioApp {
           "Professional and optimal data analysis, using the best tools in the industry.",
         "show-more": "Learn more",
         "analytics-appo": "Landing page for AppointmentPro project",
+        'code-title': 'developer.profile()'
       },
       /*
             de: {
@@ -577,42 +579,48 @@ class PortfolioApp {
     this.setupScrollToTop();
     this.setupFooterModals();
     this.updateContent();
+    this.setupCodeEditor();
   }
 
   setupEventListeners() {
-    // Mobile menu toggle
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("navMenu");
-    const overlay = document.getElementById("mobileMenuOverlay");
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const overlay = document.getElementById('mobileMenuOverlay');
 
-    hamburger?.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-      overlay.classList.toggle("active");
+    hamburger?.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
     });
 
-    // Close menu when clicking overlay
-    overlay?.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-      overlay.classList.remove("active");
+    overlay?.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
     });
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-          // Close mobile menu
-          hamburger?.classList.remove("active");
-          navMenu?.classList.remove("active");
-          overlay?.classList.remove("active");
-        }
-      });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            if (!href || href === '#') return; // ← Fix: no procesar href="#" vacíos
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                hamburger?.classList.remove('active');
+                navMenu?.classList.remove('active');
+                overlay?.classList.remove('active');
+            }
+        });
     });
-  }
+
+    // Botón X del drawer móvil
+document.getElementById('navDrawerClose')?.addEventListener('click', () => {
+    hamburger?.classList.remove('active');
+    navMenu?.classList.remove('active');
+    overlay?.classList.remove('active');
+});
+}
 
   setupBackgroundAnimation() {
     const canvas = document.getElementById("backgroundCanvas");
@@ -694,22 +702,30 @@ class PortfolioApp {
   }
 
   setupLanguageSelector() {
-    const languageSelect = document.getElementById("languageSelect");
-    if (languageSelect) {
-      languageSelect.addEventListener("change", (e) => {
+    const languageSelect = document.getElementById('languageSelect');
+    if (!languageSelect) return;
+
+    // Siempre inicia en español, sin importar localStorage
+    this.currentLanguage = 'es';
+    languageSelect.value = 'es';
+
+    // Sincronizar selector móvil
+const mobileSelect = document.getElementById('languageSelectMobile');
+if (mobileSelect) {
+    mobileSelect.value = 'es';
+    mobileSelect.addEventListener('change', (e) => {
+        this.currentLanguage = e.target.value;
+        languageSelect.value = e.target.value;
+        this.updateContent();
+    });
+}
+
+    languageSelect.addEventListener('change', (e) => {
         this.currentLanguage = e.target.value;
         this.updateContent();
-        localStorage.setItem("preferredLanguage", this.currentLanguage);
-      });
-
-      // Load saved language preference
-      const savedLanguage = localStorage.getItem("preferredLanguage");
-      if (savedLanguage && this.translations[savedLanguage]) {
-        this.currentLanguage = savedLanguage;
-        languageSelect.value = savedLanguage;
-      }
-    }
-  }
+        localStorage.setItem('preferredLanguage', this.currentLanguage);
+    });
+}
 
   updateContent() {
     const elements = document.querySelectorAll("[data-lang]");
@@ -1139,6 +1155,127 @@ class PortfolioApp {
     });
   }
 
+  setupCodeEditor() {
+    const codeEl = document.getElementById('editorCode');
+    const lineNumbersEl = document.getElementById('lineNumbers');
+    const terminalLines = document.getElementById('terminalLines');
+    if (!codeEl || !lineNumbersEl) return;
+
+    const code = [
+        { t: 'comment', v: '// Developer Profile — AlejoDev' },
+        { t: 'comment', v: '// Medellín, Colombia 🇨🇴' },
+        { t: 'blank' },
+        { t: 'keyword', v: 'const ', next: { t: 'var', v: 'developer' }, end: { t: 'op', v: ' = {' } },
+        { t: 'prop', v: '  name', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"Alejandro Obando Zapata",' } },
+        { t: 'prop', v: '  alias', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"AlejoDev",' } },
+        { t: 'prop', v: '  role', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"FullStack Web Developer",' } },
+        { t: 'prop', v: '  location', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"Medellín, Colombia",' } },
+        { t: 'blank' },
+        { t: 'prop', v: '  education', next: { t: 'op', v: ': {' } },
+        { t: 'prop', v: '    institution', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"SENA",' } },
+        { t: 'prop', v: '    degree', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"Tecnología en Análisis y Desarrollo de Software",' } },
+        { t: 'plain', v: '  },' },
+        { t: 'blank' },
+        { t: 'prop', v: '  skills', next: { t: 'op', v: ': {' } },
+        { t: 'prop', v: '    frontend', next: { t: 'op', v: ': ' }, end: { t: 'arr', v: '["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind"],' } },
+        { t: 'prop', v: '    backend', next: { t: 'op', v: ': ' }, end: { t: 'arr', v: '["Node.js", "Express.js", "Python"],' } },
+        { t: 'prop', v: '    database', next: { t: 'op', v: ': ' }, end: { t: 'arr', v: '["MySQL", "SQL"],' } },
+        { t: 'prop', v: '    tools', next: { t: 'op', v: ': ' }, end: { t: 'arr', v: '["Git", "GitHub", "Figma"],' } },
+        { t: 'plain', v: '  },' },
+        { t: 'blank' },
+        { t: 'prop', v: '  experience', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"2+ years",' } },
+        { t: 'prop', v: '  available', next: { t: 'op', v: ': ' }, end: { t: 'bool', v: 'true,' } },
+        { t: 'prop', v: '  contact', next: { t: 'op', v: ': ' }, end: { t: 'str', v: '"alejandrozapt152@gmail.com"' } },
+        { t: 'plain', v: '};' },
+        { t: 'blank' },
+        { t: 'func', v: 'console', next: { t: 'op', v: '.' }, end: { t: 'method', v: 'log(developer)' }, last: { t: 'op', v: ';' } },
+    ];
+
+    const colors = {
+        comment: '#6a9955',
+        keyword: '#c586c0',
+        var: '#9cdcfe',
+        prop: '#9cdcfe',
+        str: '#ce9178',
+        arr: '#ce9178',
+        bool: '#569cd6',
+        op: '#d4d4d4',
+        plain: '#d4d4d4',
+        blank: '',
+        func: '#dcdcaa',
+        method: '#dcdcaa',
+    };
+
+    let html = '';
+    let lineCount = 0;
+
+    code.forEach(line => {
+        lineCount++;
+        if (line.t === 'blank') {
+            html += `<span class="code-line"> \n</span>`;
+        } else if (line.t === 'comment') {
+            html += `<span class="code-line"><span style="color:${colors.comment}">${line.v}</span>\n</span>`;
+        } else {
+            let row = `<span class="code-line">`;
+            row += `<span style="color:${colors[line.t]}">${line.v}</span>`;
+            if (line.next) row += `<span style="color:${colors[line.next.t]}">${line.next.v}</span>`;
+            if (line.end) row += `<span style="color:${colors[line.end.t]}">${line.end.v}</span>`;
+            if (line.last) row += `<span style="color:${colors[line.last.t]}">${line.last.v}</span>`;
+            row += `\n</span>`;
+            html += row;
+        }
+    });
+
+    codeEl.innerHTML = html;
+
+    // Line numbers
+    let nums = '';
+    for (let i = 1; i <= lineCount; i++) {
+        nums += `<span>${i}</span>\n`;
+    }
+    lineNumbersEl.innerHTML = nums;
+
+    // Terminal typing animation
+    if (!terminalLines) return;
+    const outputs = [
+        { t: 'info', v: '> Ejecutando módulo developer...' },
+        { t: 'key', v: '  name        → ', val: 'Alejandro Obando Zapata' },
+        { t: 'key', v: '  role        → ', val: 'FullStack Web Developer' },
+        { t: 'key', v: '  location    → ', val: 'Medellín, Colombia' },
+        { t: 'key', v: '  experience  → ', val: '2+ years' },
+        { t: 'key', v: '  available   → ', val: 'true ✓' },
+        { t: 'success', v: '> ¡Listo para nuevos proyectos! 🚀' },
+    ];
+
+    let idx = 0;
+    const typeNext = () => {
+        if (idx >= outputs.length) return;
+        const item = outputs[idx++];
+        const line = document.createElement('div');
+        line.className = `terminal-line tl-${item.t}`;
+        if (item.val !== undefined) {
+            line.innerHTML = `<span class="tl-label">${item.v}</span><span class="tl-val">${item.val}</span>`;
+        } else {
+            line.textContent = item.v;
+        }
+        terminalLines.appendChild(line);
+        setTimeout(typeNext, 400);
+    };
+
+    // Activar cuando entra en viewport
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(typeNext, 600);
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const section = document.getElementById('code-profile');
+    if (section) observer.observe(section);
+}
+
   scrollToSection(sectionId) {
     const element = document.querySelector(sectionId);
     if (element) {
@@ -1152,10 +1289,11 @@ document.addEventListener("DOMContentLoaded", () => {
   new PortfolioApp();
 });
 
-// Additional utility functions
-function changeLanguage() {
-  // This function is called from the HTML select onchange event
-  // The main logic is handled in the PortfolioApp class
+
+function changeLanguage(val) {
+    // Sincroniza el selector del header desktop si se usa el móvil
+    const desktopSelect = document.getElementById('languageSelect');
+    if (desktopSelect && val) desktopSelect.value = val;
 }
 
 function scrollToSection(sectionId) {
