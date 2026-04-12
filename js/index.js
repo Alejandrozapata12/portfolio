@@ -1154,6 +1154,8 @@ if (mobileSelect) {
     });
   }
 
+  
+
   setupCodeEditor() {
     const codeEl = document.getElementById('editorCode');
     const lineNumbersEl = document.getElementById('lineNumbers');
