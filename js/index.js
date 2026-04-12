@@ -575,7 +575,6 @@ class PortfolioApp {
     this.setupServicesAutoScroll();
     this.setupCertificateModals();
     this.setupScrollAnimations();
-    this.setupFormValidation();
     this.setupScrollToTop();
     this.setupFooterModals();
     this.updateContent();
