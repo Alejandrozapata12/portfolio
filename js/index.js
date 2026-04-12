@@ -107,7 +107,8 @@ class PortfolioApp {
           "Analisis de datos de manera profesional y optima, utilizando las mejores herramientas del sector.",
         "show-more": "Conozca más",
         "analytics-appo": "Langing Page del proyecto AppointmentPro",
-        'code-title': 'developer.profile()'
+        'code-title': 'developer.profile()',
+        'available': 'Disponible'
       },
       en: {
         "nav-home": "Home",
@@ -214,7 +215,8 @@ class PortfolioApp {
           "Professional and optimal data analysis, using the best tools in the industry.",
         "show-more": "Learn more",
         "analytics-appo": "Landing page for AppointmentPro project",
-        'code-title': 'developer.profile()'
+        'code-title': 'developer.profile()',
+        'available': 'Available'
       },
       /*
             de: {
