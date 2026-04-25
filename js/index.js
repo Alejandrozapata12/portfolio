@@ -581,6 +581,16 @@ class PortfolioApp {
     this.setupFooterModals();
     this.updateContent();
     this.setupCodeEditor();
+    this.setupScrollButtons();
+  }
+
+  setupScrollButtons() {
+    document.querySelectorAll('[data-scroll-to]').forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.scrollTo;
+        document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   }
 
   setupEventListeners() {

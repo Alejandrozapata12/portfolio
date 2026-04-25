@@ -5,28 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AlejoDev</title>
+  <meta name="description" content="Alejandro Obando Zapata - FullStack Web Developer. Creando experiencias digitales con tecnologías modernas como React, Node.js y más." />
+  <meta name="keywords" content="FullStack Developer, Web Developer, React, Node.js, JavaScript, HTML, CSS, Portfolio, Medellín" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="favicon.png" type="image / x - png">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
-  <!-- Animated Background -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <div class="background-container">
     <canvas id="backgroundCanvas"></canvas>
     <div class="grid-overlay"></div>
   </div>
 
-  <!-- Navigation -->
   <nav class="neon-nav">
     <div class="nav-container">
       <div class="logo-container">
         <i class="fas fa-terminal neon-logo"></i>
-        <span>
-          <a href="#home" class="neon-brand" title="Home">AlejoDev</a></span>
+        <span><a href="#home" class="neon-brand" title="Home">AlejoDev</a></span>
       </div>
 
       <div class="nav-menu" id="navMenu">
@@ -41,63 +40,34 @@
         </div>
         <div class="nav-drawer-divider"></div>
         <ul class="nav-list">
-          <li>
-            <a href="#home" data-section="home"><i class="fas fa-home"></i>
-              <span data-lang="nav-home">Inicio</span></a>
-          </li>
-          <li>
-            <a href="#about" data-section="about"><i class="fas fa-user"></i>
-              <span data-lang="nav-about">Sobre Mí</span></a>
-          </li>
-          <!-- Code Profile Section -->
-
-          <li>
-            <a href="#experience" data-section="experience"><i class="fas fa-briefcase"></i>
-              <span data-lang="nav-experience">Experiencia</span></a>
-          </li>
-          <li>
-            <a href="#projects" data-section="projects"><i class="fas fa-code"></i>
-              <span data-lang="nav-projects">Proyectos</span></a>
-          </li>
-          <li>
-            <a href="#skills" data-section="skills"><i class="fas fa-cogs"></i>
-              <span data-lang="nav-skills">Habilidades</span></a>
-          </li>
-          <li>
-            <a href="#contact" data-section="contact"><i class="fas fa-envelope"></i>
-              <span data-lang="nav-contact">Contacto</span></a>
-          </li>
+          <li><a href="#home" data-section="home"><i class="fas fa-home"></i><span data-lang="nav-home">Inicio</span></a></li>
+          <li><a href="#about" data-section="about"><i class="fas fa-user"></i><span data-lang="nav-about">Sobre Mí</span></a></li>
+          <li><a href="#experience" data-section="experience"><i class="fas fa-briefcase"></i><span data-lang="nav-experience">Experiencia</span></a></li>
+          <li><a href="#projects" data-section="projects"><i class="fas fa-code"></i><span data-lang="nav-projects">Proyectos</span></a></li>
+          <li><a href="#skills" data-section="skills"><i class="fas fa-cogs"></i><span data-lang="nav-skills">Habilidades</span></a></li>
+          <li><a href="#contact" data-section="contact"><i class="fas fa-envelope"></i><span data-lang="nav-contact">Contacto</span></a></li>
         </ul>
         <div class="nav-drawer-footer">
           <div class="nav-drawer-lang">
+            <label for="languageSelectMobile" class="visually-hidden">Seleccionar idioma</label>
             <i class="fas fa-globe" style="color: var(--primary-color); font-size:0.9rem;"></i>
-            <select id="languageSelectMobile" onchange="changeLanguage(this.value)">
+            <select id="languageSelectMobile">
               <option value="es">🇪🇸 Español</option>
               <option value="en">🇺🇸 English</option>
             </select>
           </div>
           <div class="nav-drawer-socials">
-            <a href="https://github.com/Alejandrozapata12" target="_blank" aria-label="GitHub"><i
-                class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/norbey-alejandro-obando-zapata-3231a0185" target="_blank"
-              aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Alejandrozapata12" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/norbey-alejandro-obando-zapata-3231a0185" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
 
       <div class="language-selector">
-        <select id="languageSelect" onchange="changeLanguage()">
+        <label for="languageSelect" class="visually-hidden">Seleccionar idioma</label>
+        <select id="languageSelect">
           <option value="es">🇪🇸 ES</option>
           <option value="en">🇺🇸 EN</option>
-          <!-- 
-            <option value="de">🇩🇪 DE</option>
-            <option value="fr">🇫🇷 FR</option>
-            <option value="ru">🇷🇺 RU</option>
-            <option value="zh">🇨🇳 ZH</option>
-            <option value="it">🇮🇹 IT</option>
-            <option value="hi">🇮🇳 HI</option>
-            <option value="ja">🇯🇵 JA</option>
-            -->
         </select>
       </div>
 
@@ -107,805 +77,533 @@
         <span></span>
       </div>
     </div>
-
-    <div class="current-section-indicator"></div>
   </nav>
 
   <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="profile-animated">
-          <div class="profile-avatar">
-            <span class="avatar-initials">AZ</span>
-            <div class="avatar-ring"></div>
-            <div class="avatar-ring ring-2"></div>
-          </div>
-
-          <!--Available-->
-          <div class="available">
-            <span class="status-dot"></span>
-            <span data-lang="available">Disponible</span>
-          </div>
-
-
-          <div class="profile-glow"></div>
-        </div>
-
-        <div class="hero-text">
-          <h1 class="hero-title">
-            <span class="title-line" data-lang="hero-great">Hola, soy</span>
-            <span class="title-highlight" data-lang="hero-name">Alejandro Obando Zapata</span>
-            <span class="title-sub" data-lang="hero-title">FullStack Web Developer</span>
-          </h1>
-
-          <p class="hero-description" data-lang="hero-desc">
-            Crafting digital experiences with cutting-edge technologies and
-            innovative solutions
-          </p>
-
-          <div class="hero-buttons">
-            <button class="neon-button primary" onclick="scrollToSection('#projects')">
-              <span data-lang="view-work">View My Work</span>
-              <div class="button-glow"></div>
-            </button>
-            <button class="neon-button secondary">
-              <span data-lang="get-in-touch" onclick="scrollToSection('#contact')">Get In Touch</span>
-              <div class="button-glow"></div>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="social-links">
-        <a href="#" class="social-link" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0" />
-            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-          </svg></a>
-        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Alejandrozapata12" class="social-link" aria-label="GitHub"><i
-            class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/norbey-alejandro-obando-zapata-3231a0185?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2 class="section-title" data-lang="about-title">About Me</h2>
-
-      <div class="about-content">
-        <div class="about-text">
-          <p data-lang="about-p1">
-            I'm a passionate fullstack developer specializing in creating
-            robust web applications using modern technologies like React,
-            Node.js, and advanced database systems.
-          </p>
-          <p data-lang="about-p2">
-            With extensive experience in building scalable applications, I
-            focus on delivering exceptional user experiences with clean,
-            efficient code and innovative solutions.
-          </p>
-
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-number">2+</div>
-              <div class="stat-label" data-lang="years-exp">
-                Years Experience
-              </div>
+  <main id="main-content">
+    <section id="home" class="hero-section" aria-label="Inicio">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="profile-animated">
+            <div class="profile-avatar">
+              <span class="avatar-initials">AZ</span>
+              <div class="avatar-ring"></div>
+              <div class="avatar-ring ring-2"></div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">15+</div>
-              <div class="stat-label" data-lang="projects-completed">
-                Projects Completed
-              </div>
+            <div class="available">
+              <span class="status-dot"></span>
+              <span data-lang="available">Disponible</span>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">12+</div>
-              <div class="stat-label" data-lang="happy-clients">
-                Happy Clients
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="education-timeline">
-          <h3 data-lang="education">Education</h3>
-          <div class="timeline-item">
-            <div class="timeline-date">2022 - 2022</div>
-            <h4 data-lang="certification">Personal Development G4 - ONE - Frontend Development</h4>
-            <p>Alura Latam</p><br>
-            <button class="action-button primary" data-lang="show-more"
-              onclick="window.open('https://www.aluracursos.com/sobre', '_blank')">
-              Learn more
-            </button><br><br>
-            <button class="action-button secondary certificate-btn"
-              data-certificate="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-              data-lang="view-certificate">
-              Ver certificado
-            </button>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2022 - 2025</div>
-            <h4 data-lang="degree">
-              Tecnología en Análisis y Desarrollode Software
-            </h4>
-            <p>Servicio Nacional De Aprendizaje - Sena</p><br>
-            <button class="action-button primary" data-lang="show-more"
-              onclick="window.open('https://www.sena.edu.co/es-co/Paginas/default.aspx', '_blank')">
-              Learn more
-            </button><br><br>
-            <button class="action-button secondary certificate-btn"
-              data-certificate="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-              data-lang="view-certificate">
-              Ver certificado
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="experience-section">
-    <div class="container">
-      <h2 class="section-title" data-lang="experience-title">Experiencia Laboral</h2>
-      <div class="experience-timeline">
-        <div class="timeline-line"></div>
-
-        <article class="experience-item">
-          <span class="experience-dot"></span>
-          <div class="experience-card">
-            <div class="experience-header">
-              <h3 data-lang="experience-role">Desarrollador Web FullStack</h3>
-              <span class="experience-company" data-lang="experience-company">Servicio Nacional De Aprendizaje -
-                SENA</span>
-              <span class="experience-date" data-lang="experience-date">2026</span>
-            </div>
-            <div class="experience-details">
-              <p data-lang="experience-tools"><strong>Herramientas y tecnologías:</strong> HTML5, CSS3, JavaScript,
-                Node.js, Express.js, MySQL.</p>
-              <p data-lang="experience-project"><strong>Proyecto:</strong> <em>Inventrack</em> — app web de gestión de
-                inventarios.</p>
-              <ul class="experience-list">
-                <li data-lang="experience-item-1">Arquitectura fullstack con API REST para gestión de productos,
-                  categorías y usuarios.</li>
-                <li data-lang="experience-item-2">Login seguro con roles Admin/Empleado y control de acceso a rutas.
-                </li>
-                <li data-lang="experience-item-3">Dashboard dinámico con métricas en tiempo real, filtros de inventario
-                  y alertas low-stock.</li>
-                <li data-lang="experience-item-4">Integración de la base de datos MySQL con migraciones y consultas
-                  optimizadas.</li>
-                <li data-lang="experience-item-5">Interfaz responsive y animaciones tipo neon en componentes clave.</li>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2 class="section-title" data-lang="projects-title">
-        Featured Projects
-      </h2>
-
-      <div class="projects-grid">
-        <div class="project-card" data-project="inventrack">
-          <div class="project-image">
-            <div class="screenshot-carousel">
-              <img src="img/login_inventrack.png" alt="Login Screen" class="carousel-slide active" />
-              <img src="img/dashboard-empleado.jpeg" alt="Employee Dashboard" class="carousel-slide" />
-              <img src="img/dashboard-admin.jpeg" alt="Admin Dashboard" class="carousel-slide" />
-            </div>
-            <div class="image-glow"></div>
+            <div class="profile-glow"></div>
           </div>
 
-          <div class="project-content">
-            <h3>Inventrack</h3>
-            <p data-lang="inventrack-desc">
-              Advanced inventory management system with multi-role access and
-              real-time tracking capabilities.
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="title-line" data-lang="hero-great">Hola, soy</span>
+              <span class="title-highlight" data-lang="hero-name">Alejandro Obando Zapata</span>
+              <span class="title-sub" data-lang="hero-title">FullStack Web Developer</span>
+            </h1>
+            <p class="hero-description" data-lang="hero-desc">
+              Crafting digital experiences with cutting-edge technologies and innovative solutions
             </p>
-
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-
-            <div class="project-actions">
-              <button class="action-button primary" data-lang="view-project"
-                onclick="window.open('https://inventrack-system.vercel.app/', '_blank')">
-                View Project
+            <div class="hero-buttons">
+              <button class="neon-button primary" data-scroll-to="#projects">
+                <span data-lang="view-work">View My Work</span>
+                <div class="button-glow"></div>
               </button>
-              <a href="https://github.com/Alejandrozapata12/inventrack_system" class="action-button github"
-                aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="img/Login_plannerTime.jpeg" alt="Medical Portal"
-              style="max-width:100% !important; height:auto !important; object-fit:cover !important;" />
-            <div class="image-glow"></div>
-          </div>
-
-          <div class="project-content">
-            <h3>Medical portal PlannerTime</h3>
-            <p data-lang="ecommerce-desc">
-              Comprehensive platform for managing medical appointments and multi-role medical processes with integration
-              into various third-party programs.
-            </p>
-
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">Tailwind</span>
-
-            </div>
-
-            <div class="project-actions">
-              <button class="action-button primary" data-lang="view-project"
-                onclick="window.open('https://medical-portal-planner-time.vercel.app/', '_blank')">View Project
+              <button class="neon-button secondary" data-scroll-to="#contact">
+                <span data-lang="get-in-touch">Get In Touch</span>
+                <div class="button-glow"></div>
               </button>
-              <a href="https://github.com/Alejandrozapata12/medicalPortalPlannerTime" class="action-button github"
-                aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
             </div>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-image">
-            <img src="img/landing_inventrack.jpeg" alt="Landing Page"
-              style="max-width:100% !important; height:auto !important; object-fit:cover !important;" />
-            <div class="image-glow"></div>
-          </div>
-          <div class="project-content">
-            <h3>Landing Page - Inventrack</h3>
-            <p data-lang="analytics-desc">
-              Static demo page for the Inventrack web project.
-            </p>
-
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-            </div>
-
-            <div class="project-actions">
-              <button class="action-button primary" data-lang="view-project"
-                onclick="window.open('https://langind-page-inventrack.vercel.app/', '_blank')">View Project
-              </button>
-              <a href="https://github.com/Alejandrozapata12/langindPageInventrack" class="action-button github"
-                aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/Alejandrozapata12" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/norbey-alejandro-obando-zapata-3231a0185" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
+      </div>
+    </section>
 
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="img/appointmentPro.jpeg" alt="Landing Page"
-              style="max-width:100% !important; height:auto !important; object-fit:cover !important;" />
-            <div class="image-glow"></div>
-          </div>
-          <div class="project-content">
-            <h3>Landing Page - AppointmentPro</h3>
-            <p data-lang="analytics-appo">
-              Landing page for AppointmentPro project
-            </p>
-
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
+    <section id="about" class="about-section" aria-label="Sobre mí">
+      <div class="container">
+        <h2 class="section-title" data-lang="about-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p data-lang="about-p1">I'm a passionate fullstack developer specializing in creating robust web applications using modern technologies like React, Node.js, and advanced database systems.</p>
+            <p data-lang="about-p2">With extensive experience in building scalable applications, I focus on delivering exceptional user experiences with clean, efficient code and innovative solutions.</p>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label" data-lang="years-exp">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label" data-lang="projects-completed">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">12+</div>
+                <div class="stat-label" data-lang="happy-clients">Happy Clients</div>
+              </div>
             </div>
-
-            <div class="project-actions">
-              <button class="action-button primary" data-lang="view-project"
-                onclick="window.open('https://landing-appointment-e.vercel.app/', '_blank')">View Project
-              </button>
-              <a href="https://github.com/Alejandrozapata12/appointment" class="action-button github"
-                aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
+          </div>
+          <div class="education-timeline">
+            <h3 data-lang="education">Education</h3>
+            <div class="timeline-item">
+              <div class="timeline-date">2022 - 2022</div>
+              <h4 data-lang="certification">Personal Development G4 - ONE - Frontend Development</h4>
+              <p>Alura Latam</p>
+              <button class="action-button primary" data-lang="show-more" onclick="window.open('https://www.aluracursos.com/sobre', '_blank')">Learn more</button>
+              <button class="action-button secondary certificate-btn" data-certificate="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" data-lang="view-certificate">Ver certificado</button>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2022 - 2025</div>
+              <h4 data-lang="degree">Tecnología en Análisis y Desarrollode Software</h4>
+              <p>Servicio Nacional De Aprendizaje - Sena</p>
+              <button class="action-button primary" data-lang="show-more" onclick="window.open('https://www.sena.edu.co/es-co/Paginas/default.aspx', '_blank')">Learn more</button>
+              <button class="action-button secondary certificate-btn" data-certificate="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" data-lang="view-certificate">Ver certificado</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="projects-actions" style="text-align:center; margin-top: 2rem;">
-        <button id="toggleProjectsBtn" class="action-button primary" data-lang="show-more-projects">Mostrar más</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS SECTION START -->
-  <section id="skills" class="skills-section">
-    <div class="container">
-      <h2 class="section-title" data-lang="skills-title">Habilidades</h2>
-      <div class="roadmap">
-
-        <div class="roadmap-group">
-          <div class="roadmap-group-label">
-            <span class="roadmap-group-dot" style="background:#00ff88;box-shadow:0 0 10px #00ff88"></span>
-            <span data-lang="frontend">Frontend</span>
-          </div>
-          <div class="roadmap-track">
-            <div class="roadmap-line" style="--lc:#00ff88"></div>
-            <div class="roadmap-nodes">
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#00ff88"></div>
-                <div class="rn-card">
-                  <div class="rn-icon html"><svg viewBox="0 0 128 128">
-                      <path fill="#E44D26" d="M19 114L9 2h110l-10 112-45 12z" />
-                      <path fill="#F16529" d="M64 117l36-10 9-96H64z" />
-                      <path fill="#EBEBEB" d="M64 52H46l-1-14h19V24H29l3 42h32zm0 36l-15-4-1-11H34l2 22 28 8z" />
-                      <path fill="#fff" d="M64 52v14h17l-2 18-15 4v14l28-8 3-42zm0-28v14h33l1-14z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">HTML5</span>
-                    <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
+    <section id="experience" class="experience-section" aria-label="Experiencia laboral">
+      <div class="container">
+        <h2 class="section-title" data-lang="experience-title">Experiencia Laboral</h2>
+        <div class="experience-timeline">
+          <div class="timeline-line"></div>
+          <article class="experience-item">
+            <span class="experience-dot"></span>
+            <div class="experience-card">
+              <div class="experience-header">
+                <h3 data-lang="experience-role">Desarrollador Web FullStack</h3>
+                <span class="experience-company" data-lang="experience-company">Servicio Nacional De Aprendizaje - SENA</span>
+                <span class="experience-date" data-lang="experience-date">2026</span>
               </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#00ff88"></div>
-                <div class="rn-card">
-                  <div class="rn-icon css"><svg viewBox="0 0 128 128">
-                      <path fill="#1572B6" d="M19 114L9 1h110l-10 113-45 12z" />
-                      <path fill="#33A9DC" d="M64 117l37-10 9-96H64z" />
-                      <path fill="#fff" d="M64 51h18l1-14H64V23h35l-4 42H64zm0 36l-15-4-1-11H34l2 22 28 8z" />
-                      <path fill="#EBEBEB" d="M81 65l-2 18-15 4v14l28-8 3-28zm-17-42v14H31l-1-14z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">CSS3</span>
-                    <span class="rn-badge" style="--bc:#00ff88" data-lang="level-sec">Avanzado</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#00ff88"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(240,219,79,0.12)"><svg viewBox="0 0 128 128">
-                      <path fill="#F0DB4F" d="M1 1h126v126H1z" />
-                      <path fill="#323330"
-                        d="M116 97c-1-6-5-11-16-15-4-2-8-3-9-6-1-2-1-3 0-4 1-3 5-4 8-3 2 1 4 2 5 5 5-4 5-4 9-6-1-2-2-3-3-4-3-4-8-5-15-5l-4 1c-3 1-7 3-9 5-6 7-4 18 3 23 7 5 18 7 19 12 1 6-4 8-10 7-4-1-7-3-9-7l-10 6c1 2 2 4 4 5 9 9 32 9 36-5 0 0 1-4 1-9zM69 59H58v30c0 6 0 12-1 14-2 4-6 3-8 2-2-1-3-2-4-4l-1-2-10 6c2 3 4 6 7 8 4 2 10 3 17 2 4-1 8-4 9-7 3-5 2-11 2-17V59z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">JavaScript</span>
-                    <span class="rn-badge" style="--bc:#00ff88" data-lang="level-sec">Avanzado</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#00ff88"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(203,102,153,0.12)"><svg viewBox="0 0 128 128">
-                      <path fill="#CB6699"
-                        d="M1 56c0 1 0 2 1 2 1 3 2 5 4 8 3 3 6 6 10 8l9 6-1 1c-4 2-8 4-11 7-2 2-4 3-6 6-2 4-3 8-1 12 1 1 1 2 2 3l1 1 3 1h3c3 0 6-1 9-3 4-3 7-7 8-12 1-4 1-7 0-11l-1-1-1-1 7-4h1l-1 1c-1 3-1 6-1 9 0 3 1 6 3 9 2 2 5 2 7 0l2-3 3-7 5-12c2-4 3-8 5-12l1-1c0 2 1 3 1 5 1 2 1 3 2 5l-2 2c-2 3-3 4-4 7 0 1-1 2 0 3 0 2 2 3 4 3l3-1c3-2 6-4 9-7 3-3 5-6 5-10 0-1-1-2-1-3-1-1-1-1-3-1-4 0-9 2-13 5l-3 1c0-1-1-1-1-1l-2-5c0-2-1-3 0-5l1-4c0-1 0-1-1-2l-5 1-1 1-2 5c-3 6-6 13-8 19l-2 4-1 1-1-1v-2l2-7c0-2 1-4 1-6 0-1 0-1-1-2l-3 1-1 1v-1c0-1 0-3-1-4-1-2-2-3-4-3-1 0-2 0-3 1-3 1-6 4-8 7l-8 5-3 2c-1-1-2-2-2-2-3-2-5-4-7-7-1-2-2-4-2-6 0-3 1-6 2-8 2-3 5-6 8-8 3-3 7-5 10-7 5-3 10-5 15-7 6-2 11-3 17-2 2 0 4 1 7 2 2 1 3 2 3 4 1 2 1 3 0 5-1 4-3 6-5 9-4 4-9 7-14 9-3 1-6 2-10 2-3 0-5 0-8-1-2-1-3-2-4-3-1 0 0-1 0-1 0 1 0 1 1 2 1 1 2 2 3 3 3 2 6 2 9 2 5 0 9-1 14-2 6-2 12-5 16-10 4-4 6-9 7-14 0-3 0-5-1-8-1-3-4-5-6-6C68 17 64 17 60 17h-4c-5 0-10 1-15 3-4 1-7 3-11 5-8 4-15 8-21 15-3 3-5 7-7 11l-1 4v1zm28 36c0 4-2 8-6 11-2 2-4 3-6 3-1 0-2 0-3-1-1-1-1-2-2-3v-3c1-2 1-4 2-5 1-2 3-4 5-5l9-6c0 2 1 4 1 6v3zm25 15l-6-7c0 3-4 8-6 7l6-7zm20-5l-1 1-1-1c1-3 2-5 5-7 1 3 0 6-3 8z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Sass</span>
-                    <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#00ff88"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(56,189,248,0.12)"><svg viewBox="0 0 128 128">
-                      <path
-                        d="M64 26c-17 0-28 8-32 26 6-9 14-12 22-10 5 1 8 5 12 9 6 6 14 14 30 14 17 0 28-9 32-26-6 9-14 12-22 10-5-1-8-5-12-9C88 34 81 26 64 26zM32 64c-17 0-28 9-32 26 6-9 14-12 22-10 5 1 8 5 12 9 6 6 14 14 30 14 17 0 28-9 32-26-6 9-14 12-22 10-5-1-8-5-12-9C56 72 49 64 32 64z"
-                        fill="#38bdf8" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Tailwind</span>
-                    <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#00ff88"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(97,218,251,0.12)"><svg viewBox="0 0 128 128">
-                      <g fill="#61DAFB">
-                        <circle cx="64" cy="64" r="11" />
-                        <path
-                          d="M107 45c-2-1-5-2-7-2 1-2 1-5 2-7 2-13 0-23-7-26-2-1-4-2-6-2-7 0-16 5-25 14C55 13 46 8 39 8c-2 0-5 1-6 2-7 4-9 13-7 26 0 2 1 5 2 7-2 1-5 1-7 2C8 50 1 57 1 64s7 14 19 19c2 1 5 2 7 2-1 3-2 5-2 7-2 13 0 23 7 26 2 1 4 2 6 2 7 0 16-5 25-14 9 9 18 14 25 14 2 0 5-1 6-2 7-4 9-13 7-26 0-2-1-5-2-7 2-1 5-1 7-2 12-5 19-11 19-19s-7-14-19-19zM93 15c4 2 5 10 4 20l-1 7c-5-1-11-2-17-3-3-5-7-9-10-13 7-7 15-12 21-12 1 0 2 0 3 1zM81 74l-6 10c-4 0-7 0-11 0-4 0-8 0-11 0l-6-10-5-10 5-10 6-10c4 0 7 0 11 0 4 0 8 0 11 0l6 10 5 10-5 10zm8-3c2 3 3 7 4 10-3 1-7 1-11 2l4-6 3-6zm-7-25l-4-6 11 2c-1 3-2 7-4 10l-3-6zM64 30l7 8-7 0-7 0 7-8zm-18 14l-4 6-4-10 11-2-3 6zM35 15c1-1 2-1 4-1 6 0 13 5 21 12-3 4-7 8-10 13-6 1-11 2-16 3l-2-7C31 25 32 17 35 15zM7 64c0-5 6-10 16-13l6-2c2 5 4 10 6 16-2 5-4 10-6 15C15 76 7 70 7 64zm28 49c-4-2-5-10-4-20l1-7 17 3c3 5 7 9 10 13-7 7-15 12-21 12-1 0-2 0-3-1zM96 93c2 10 0 18-4 20-1 1-2 1-4 1-6 0-13-5-21-12 3-4 7-9 10-13 6-1 11-1 17-3l2 7zm9-16l-6 2c-2-5-4-10-6-16 2-5 4-10 6-15 14 4 22 10 22 16 0 5-6 10-16 13z" />
-                      </g>
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">React.js</span>
-                    <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
+              <div class="experience-details">
+                <p data-lang="experience-tools"><strong>Herramientas y tecnologías:</strong> HTML5, CSS3, JavaScript, Node.js, Express.js, MySQL.</p>
+                <p data-lang="experience-project"><strong>Proyecto:</strong> <em>Inventrack</em> — app web de gestión de inventarios.</p>
+                <ul class="experience-list">
+                  <li data-lang="experience-item-1">Arquitectura fullstack con API REST para gestión de productos, categorías y usuarios.</li>
+                  <li data-lang="experience-item-2">Login seguro con roles Admin/Empleado y control de acceso a rutas.</li>
+                  <li data-lang="experience-item-3">Dashboard dinámico con métricas en tiempo real, filtros de inventario y alertas low-stock.</li>
+                  <li data-lang="experience-item-4">Integración de la base de datos MySQL con migraciones y consultas optimizadas.</li>
+                  <li data-lang="experience-item-5">Interfaz responsive y animaciones tipo neon en componentes clave.</li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="roadmap-group">
-          <div class="roadmap-group-label">
-            <span class="roadmap-group-dot" style="background:#ff00aa;box-shadow:0 0 10px #ff00aa"></span>
-            <span data-lang="backend">Backend</span>
-          </div>
-          <div class="roadmap-track">
-            <div class="roadmap-line" style="--lc:#ff00aa"></div>
-            <div class="roadmap-nodes">
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#ff00aa"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(131,205,41,0.12)"><svg viewBox="0 0 128 128">
-                      <path fill="#83CD29"
-                        d="M113 30L69 5c-3-2-6-2-9 0L15 30C12 32 10 35 10 38v51c0 3 2 6 5 8l12 7c6 3 8 3 10 3 8 0 13-5 13-14V43c0-1 0-2-1-2h-6c-1 0-2 1-2 2v50c0 4-4 8-10 4L19 91c0 0-1-1-1-1V38c0 0 1-1 1-1l44-26c0 0 1 0 1 0l44 26c0 0 0 1 0 1v51c0 0 0 1 0 1L63 116c0 0-1 0-1 0L51 109c0 0-1 0-1 0-3 2-4 2-7 3c-1 0-2 1 0 2l15 9c1 1 3 1 5 1 2 0 3 0 5-1l44-26c3-2 4-5 4-8V38c0-3-1-6-4-8zM78 81c-12 0-14-3-15-9-1-1-1-1-1-1h-6c-1 0-1 1-1 2 0 7 4 17 23 17 14 0 22-5 22-15 0-10-6-12-20-14C66 60 65 59 65 56c0-3 1-6 11-6 9 0 12 2 14 8c0 1 1 1 1 1h6c0 0 1 0 1 0 0 0 0-1 0-1C97 47 90 42 76 42c-13 0-20 5-20 14 0 10 7 12 20 14 14 1 16 4 16 6 0 5-4 7-13 7z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Node.js</span>
-                    <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#ff00aa"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(255,255,255,0.06)"><svg viewBox="0 0 128 128">
-                      <path fill="#fff"
-                        d="M127 98c-5 1-7 0-10-4-6-8-12-17-18-25-1-1-2-2-3-3C89 76 82 85 75 95c-2 3-5 5-9 4l27-36L68 30c4-1 7 0 10 3 6 9 12 17 19 25 6-9 13-17 19-25 2-3 5-5 9-3-3 4-6 9-10 13-4 6-9 12-13 17-2 2-1 3 0 5C110 76 118 87 127 98zM1 62c1-4 1-7 2-11C9 30 31 21 47 34c9 8 12 18 11 31H7c-1 22 15 36 36 29 7-2 11-8 13-15 1-4 3-4 6-3-2 9-6 16-14 21-12 7-29 5-38-5C5 86 3 79 2 71c0-1 0-2-1-4V62zm6-1h50c0-16-10-27-24-28C18 33 7 44 7 61z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Express.js</span>
-                    <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#ff00aa"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(255,212,59,0.12)"><svg viewBox="0 0 128 128">
-                      <path fill="#5A9FD4"
-                        d="M63 2C59 2 55 2 51 3 41 5 39 9 39 16v9h25v3H30c-7 0-13 4-15 13-2 9-2 15 0 25 2 7 6 13 13 13h8V67c0-8 7-15 15-15h25c7 0 12-6 12-13V16c0-7-6-12-12-13C71 2 67 2 63 2zM50 10c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z" />
-                      <path fill="#FFD43B"
-                        d="M92 28v11c0 9-7 16-15 16H51c-7 0-12 6-12 13v23c0 7 6 11 12 13 8 2 15 2 25 0 6-2 12-5 12-13v-9H64v-3h37c7 0 10-5 12-13 3-8 2-15 0-25-2-7-5-13-12-13H92zM78 88c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Python</span>
-                    <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#ff00aa"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(0,97,138,0.15)"><svg viewBox="0 0 128 128">
-                      <path fill="#00618A"
-                        d="M117 98c-7 0-12 0-17 2-1 1-3 1-3 2 1 1 1 2 1 3 1 2 3 4 4 5 2 1 4 3 5 4 3 2 7 3 10 5 2 1 4 3 6 4 1 1 2 2 3 2v0c-1-1-1-2-1-3l-3-3c-2-3-6-6-9-9-3-2-9-5-10-8l0 0c2 0 4-1 6-1 3-1 6-1 9-1l4-1v-1c-2-2-3-4-4-5-4-4-9-7-14-11-3-2-6-3-9-4-1 0-3-1-3-2-2-2-2-4-4-7-2-5-5-10-7-15-1-3-2-7-4-10C89 26 79 17 64 9c-3-2-7-3-11-4H42c-1-1-3-2-4-3C30 5 17-2 14 7c-2 6 3 11 5 14 1 2 3 4 4 6 1 1 1 3 1 4 1 4 3 8 4 12 1 2 2 4 3 5 1 1 2 1 2 3-1 2-1 4-2 6C28 67 29 79 33 86c1 2 5 7 9 5 4-2 3-6 4-11 0-1 0-2 1-2v0l3 7c3 4 7 9 11 12 2 1 4 4 6 5v0h0c-1-1-1-1-2-2-2-2-3-3-4-5-4-5-7-10-10-16-1-3-3-6-4-8 0-1 0-3-1-3-1 2-3 4-4 6-2 4-2 8-2 13h0c-3-1-4-3-5-6-3-6-3-16-1-23 1-2 3-8 2-9-1-2-2-3-3-4-1-2-2-4-3-5-2-5-3-10-5-15-1-2-3-5-4-7-2-2-3-4-5-7 0-1-1-3 0-4 0-1 1-1 1-1 1-1 4 0 5 1 3 1 6 3 8 4 1 1 3 2 4 3h2c3 1 6 0 8 1 5 1 9 4 12 6 11 7 20 17 27 29 1 2 1 4 2 6 2 4 4 8 6 12 2 4 4 8 6 12 1 2 6 3 9 4 2 1 4 1 6 2 3 2 6 4 9 6 1 1 6 3 6 5zM30 23c-1 0-2 0-4 0v0h0c1 1 2 2 3 4 1 1 1 3 2 4l0 0c1-1 2-2 2-4 0-1-1-1-1-2-1-1-2-1-2-2z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">MySQL</span>
-                    <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#ff00aa"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(68,121,161,0.15)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#4479A1" stroke-width="2">
-                      <ellipse cx="12" cy="5" rx="9" ry="3" />
-                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                    </svg>
-                  </div>
-                  <div class="rn-info">
-                    <span class="rn-name">SQL</span>
-                    <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="roadmap-group">
-          <div class="roadmap-group-label">
-            <span class="roadmap-group-dot" style="background:#8800ff;box-shadow:0 0 10px #8800ff"></span>
-            <span data-lang="development-tools">Tools</span>
-          </div>
-          <div class="roadmap-track">
-            <div class="roadmap-line" style="--lc:#8800ff"></div>
-            <div class="roadmap-nodes">
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#8800ff"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(243,79,41,0.12)"><svg viewBox="0 0 128 128">
-                      <path fill="#F34F29"
-                        d="M125 58L70 3c-3-3-8-3-11 0L47 15l14 14c3-1 7 0 10 2 3 3 3 7 2 10l14 14c3-1 7 0 10 2 4 4 4 10 0 14a10 10 0 01-14 0 10 10 0 01-2-11L69 48v34a10 10 0 013 2c4 4 4 10 0 14-4 4-10 4-14 0-4-4-4-10 0-14a10 10 0 013-2V47a10 10 0 01-3-2c-3-3-4-7-2-11L41 20 3 58a8 8 0 000 12l55 55c3 3 8 3 11 0l55-55a8 8 0 000-12z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Git</span>
-                    <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#8800ff"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(255,255,255,0.06)"><svg viewBox="0 0 128 128">
-                      <path fill="#e0e0e0"
-                        d="M64 5C33 5 8 30 8 61c0 25 16 46 38 53 3 1 4-1 4-3 0-1 0-6 0-11-17 4-20-7-20-7-3-7-7-9-7-9-5-4 0-4 0-4 6 0 9 6 9 6 5 9 14 7 18 5 1-4 2-7 4-8-13-2-28-7-28-30 0-7 2-12 6-16-1-2-3-8 1-16 0 0 5-2 17 6 5-1 10-2 15-2s10 1 15 2c12-8 17-6 17-6 3 8 1 14 1 16 4 4 6 9 6 16 0 23-14 28-28 30 2 2 4 6 4 11 0 8 0 15 0 17 0 2 1 3 4 3 22-7 38-28 38-53C120 30 95 5 64 5z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">GitHub</span>
-                    <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#8800ff"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(10,207,131,0.12)"><svg viewBox="0 0 128 128">
-                      <path fill="#0acf83" d="M45 129c12 0 21-10 21-21V86H45C34 86 24 96 24 108S34 129 45 129z" />
-                      <path fill="#a259ff" d="M24 65C24 53 34 43 45 43H67v43H45C34 86 24 76 24 65z" />
-                      <path fill="#f24e1e" d="M24 22C24 10 34 0 45 0H67v43H45C34 43 24 33 24 22z" />
-                      <path fill="#ff7262" d="M67 0h21C100 0 110 10 110 22S100 43 88 43H67z" />
-                      <path fill="#1abcfe" d="M110 65c0 12-10 21-21 21S67 76 67 65 77 43 88 43 110 53 110 65z" />
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Figma</span>
-                    <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#8800ff"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(10, 135, 207, 0.12)"><svg
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                      <mask id="a" width="128" height="128" x="0" y="0" maskUnits="userSpaceOnUse"
-                        style="mask-type:alpha">
-                        <path fill="#fff" fill-rule="evenodd"
-                          d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64 1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68 50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z"
-                          clip-rule="evenodd" />
-                      </mask>
-                      <g mask="url(#a)">
-                        <path fill="#0065A9"
-                          d="M123.471 13.82 97.097 1.12A7.973 7.973 0 0 0 88 2.668L1.662 81.387a5.333 5.333 0 0 0 .006 7.887l7.052 6.411a5.333 5.333 0 0 0 6.811.303l103.971-78.875c3.488-2.646 8.498-.158 8.498 4.22v-.306a8.001 8.001 0 0 0-4.529-7.208Z" />
-                        <g filter="url(#b)">
-                          <path fill="#007ACC"
-                            d="m123.471 114.181-26.374 12.698A7.973 7.973 0 0 1 88 125.333L1.662 46.613a5.333 5.333 0 0 1 .006-7.887l7.052-6.411a5.333 5.333 0 0 1 6.811-.303l103.971 78.874c3.488 2.647 8.498.159 8.498-4.219v.306a8.001 8.001 0 0 1-4.529 7.208Z" />
-                        </g>
-                        <g filter="url(#c)">
-                          <path fill="#1F9CF0"
-                            d="M97.098 126.882A7.977 7.977 0 0 1 88 125.333c2.952 2.952 8 .861 8-3.314V5.98c0-4.175-5.048-6.266-8-3.313a7.977 7.977 0 0 1 9.098-1.549L123.467 13.8A8 8 0 0 1 128 21.01v85.982a8 8 0 0 1-4.533 7.21l-26.369 12.681Z" />
-                        </g>
-                        <path fill="url(#d)" fill-rule="evenodd"
-                          d="M90.69 127.126a7.968 7.968 0 0 0 6.349-.244l26.353-12.681a8 8 0 0 0 4.53-7.21V21.009a8 8 0 0 0-4.53-7.21L97.039 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026-21.974-16.68a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.336 5.336 0 0 0-.006 7.888L20.718 64 1.662 81.386a5.335 5.335 0 0 0 .006 7.888l7.048 6.411a5.328 5.328 0 0 0 6.807.303l21.975-16.681 50.45 46.026a7.959 7.959 0 0 0 2.742 1.793Zm5.252-92.184L57.662 64l38.28 29.057V34.943Z"
-                          clip-rule="evenodd" opacity="0.25" style="mix-blend-mode:overlay" />
-                      </g>
-                      <defs>
-                        <filter id="b" width="144.744" height="113.408" x="-8.41115" y="22.5944"
-                          color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" result="hardAlpha"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="4.16667" />
-                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                          <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36" />
-                          <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape" />
-                        </filter>
-                        <filter id="c" width="56.6667" height="144.007" x="79.6667" y="-8.0035"
-                          color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" result="hardAlpha"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="4.16667" />
-                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                          <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36" />
-                          <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape" />
-                        </filter>
-                        <linearGradient id="d" x1="63.9222" x2="63.9222" y1="0.329902" y2="127.67"
-                          gradientUnits="userSpaceOnUse">
-                          <stop stop-color="#fff" />
-                          <stop offset="1" stop-color="#fff" stop-opacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="rn-info">
-                    <span class="rn-name">Visual Studio Code</span>
-                    <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-              <div class="roadmap-node">
-                <div class="rn-dot" style="--dc:#8800ff"></div>
-                <div class="rn-card">
-                  <div class="rn-icon" style="background:rgba(223, 132, 14, 0.12)"><svg height="1em"
-                      style="flex:none;line-height:1" viewBox="0 0 24 24" width="1em"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <title>Claude</title>
-                      <path
-                        d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"
-                        fill="#D97757" fill-rule="nonzero">
-                      </path>
-                    </svg></div>
-                  <div class="rn-info">
-                    <span class="rn-name">Claude AI</span>
-                    <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- SKILLS SECTION END -->
-
-
-
-
-
-
-  <!-- ================== Services section ==================-->
-
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2 class="section-title" data-lang="services-title">
-        Professional Services
-      </h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-laptop-code"></i>
-          <h3 data-lang="service-web-dev">FullStack Web Development</h3>
-          <p data-lang="service-web-desc">
-            Complete applications with integrated backend and frontend
-          </p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3 data-lang="service-responsive">Responsive Applications</h3>
-          <p data-lang="service-responsive-desc">
-            Designs that adapt to any device
-          </p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-database"></i>
-          <h3 data-lang="service-database">Database Integration</h3>
-          <p data-lang="service-database-desc">
-            Robust systems with MySQL, etc.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-chart-line"></i>
-          <h3 data-lang="service-data">Data analysis</h3>
-          <p data-lang="service-data-desc">
-            Professional and optimal data analysis, using the best tools in the industry.
-          </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================== Contact section ==================-->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2 class="section-title" data-lang="contact-title">Get In Touch</h2>
-
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <div class="info-text">
-              <h4 data-lang="email">Email</h4>
-              <p>@gmail.com</p>
+    <section id="projects" class="projects-section" aria-label="Proyectos">
+      <div class="container">
+        <h2 class="section-title" data-lang="projects-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card" data-project="inventrack">
+            <div class="project-image">
+              <div class="screenshot-carousel">
+                <img src="img/login_inventrack.png" alt="Login Screen" class="carousel-slide active" />
+                <img src="img/dashboard-empleado.jpeg" alt="Employee Dashboard" class="carousel-slide" />
+                <img src="img/dashboard-admin.jpeg" alt="Admin Dashboard" class="carousel-slide" />
+              </div>
+              <div class="image-glow"></div>
+            </div>
+            <div class="project-content">
+              <h3>Inventrack</h3>
+              <p data-lang="inventrack-desc">Advanced inventory management system with multi-role access and real-time tracking capabilities.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <button class="action-button primary" data-lang="view-project" onclick="window.open('https://inventrack-system.vercel.app/', '_blank')">View Project</button>
+                <a href="https://github.com/Alejandrozapata12/inventrack_system" class="action-button github" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
             </div>
           </div>
 
-          <div class="info-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-              class="icon icon-tabler icons-tabler-filled icon-tabler-brand-whatsapp">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M18.497 4.409a10 10 0 0 1 -10.36 16.828l-.223 -.098l-4.759 .849l-.11 .011a1 1 0 0 1 -.11 0l-.102 -.013l-.108 -.024l-.105 -.037l-.099 -.047l-.093 -.058l-.014 -.011l-.012 -.007l-.086 -.073l-.077 -.08l-.067 -.088l-.056 -.094l-.034 -.07l-.04 -.108l-.028 -.128l-.012 -.102a1 1 0 0 1 0 -.125l.012 -.1l.024 -.11l.045 -.122l1.433 -3.304l-.009 -.014a10 10 0 0 1 1.549 -12.454l.215 -.203a10 10 0 0 1 13.226 -.217m-8.997 3.09a1.5 1.5 0 0 0 -1.5 1.5v1a6 6 0 0 0 6 6h1a1.5 1.5 0 0 0 0 -3h-1l-.144 .007a1.5 1.5 0 0 0 -1.128 .697l-.042 .074l-.022 -.007a4.01 4.01 0 0 1 -2.435 -2.435l-.008 -.023l.075 -.041a1.5 1.5 0 0 0 .704 -1.272v-1a1.5 1.5 0 0 0 -1.5 -1.5" />
-            </svg>
-            <div class="info-text">
-              <h4 data-lang="phone">WhatssApp</h4>
-              <p>+57 3042202913</p>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/Login_plannerTime.jpeg" alt="Medical Portal PlannerTime" style="max-width:100% !important; height:auto !important; object-fit:cover !important;" />
+              <div class="image-glow"></div>
+            </div>
+            <div class="project-content">
+              <h3>Medical portal PlannerTime</h3>
+              <p data-lang="ecommerce-desc">Comprehensive platform for managing medical appointments and multi-role medical processes with integration into various third-party programs.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">Tailwind</span>
+              </div>
+              <div class="project-actions">
+                <button class="action-button primary" data-lang="view-project" onclick="window.open('https://medical-portal-planner-time.vercel.app/', '_blank')">View Project</button>
+                <a href="https://github.com/Alejandrozapata12/medicalPortalPlannerTime" class="action-button github" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
             </div>
           </div>
 
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="info-text">
-              <h4 data-lang="location">Location</h4>
-              <p>Medellín, Colombia</p>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/landing_inventrack.jpeg" alt="Landing Page Inventrack" style="max-width:100% !important; height:auto !important; object-fit:cover !important;" />
+              <div class="image-glow"></div>
+            </div>
+            <div class="project-content">
+              <h3>Landing Page - Inventrack</h3>
+              <p data-lang="analytics-desc">Static demo page for the Inventrack web project.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-actions">
+                <button class="action-button primary" data-lang="view-project" onclick="window.open('https://langind-page-inventrack.vercel.app/', '_blank')">View Project</button>
+                <a href="https://github.com/Alejandrozapata12/langindPageInventrack" class="action-button github" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/appointmentPro.jpeg" alt="Landing Page AppointmentPro" style="max-width:100% !important; height:auto !important; object-fit:cover !important;" />
+              <div class="image-glow"></div>
+            </div>
+            <div class="project-content">
+              <h3>Landing Page - AppointmentPro</h3>
+              <p data-lang="analytics-appo">Landing page for AppointmentPro project</p>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <button class="action-button primary" data-lang="view-project" onclick="window.open('https://landing-appointment-e.vercel.app/', '_blank')">View Project</button>
+                <a href="https://github.com/Alejandrozapata12/appointment" class="action-button github" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
             </div>
           </div>
         </div>
-
-        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-
-          <input type="hidden" name="access_key" value="3851c801-27a8-4f26-8a70-3ef0aea5e5d1">
-          <input type="checkbox" name="botcheck" style="display:none;">
-          <input type="hidden" name="subject" value="Nuevo mensaje desde mi portfolio">
-          <input type="hidden" name="from_name" value="Portfolio Alejandro">
-
-
-          <div class="form-group">
-            <label for="name" data-lang="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Steve Morgan" />
-            <div class="input-glow"></div>
-          </div>
-
-          <div class="form-group">
-            <label for="email" data-lang="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="steve@example.com" />
-            <div class="input-glow"></div>
-          </div>
-
-          <div class="form-group">
-            <label for="message" data-lang="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="I want to work with you..."></textarea>
-            <div class="input-glow"></div>
-          </div>
-
-          <button type="submit" class="submit-button" data-lang="send-message">
-            Send Message
-            <div class="button-glow"></div>
-          </button>
-
-          <p id="form-status"></p>
-        </form>
+        <div class="projects-actions" style="text-align:center; margin-top: 2rem;">
+          <button id="toggleProjectsBtn" class="action-button primary" data-lang="show-more-projects">Mostrar más</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!--Whats Next section-->
+    <section id="skills" class="skills-section" aria-label="Habilidades">
+      <div class="container">
+        <h2 class="section-title" data-lang="skills-title">Habilidades</h2>
+        <div class="roadmap">
+          <div class="roadmap-group">
+            <div class="roadmap-group-label">
+              <span class="roadmap-group-dot" style="background:#00ff88;box-shadow:0 0 10px #00ff88"></span>
+              <span data-lang="frontend">Frontend</span>
+            </div>
+            <div class="roadmap-track">
+              <div class="roadmap-line" style="--lc:#00ff88"></div>
+              <div class="roadmap-nodes">
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#00ff88"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon html"><svg viewBox="0 0 128 128"><path fill="#E44D26" d="M19 114L9 2h110l-10 112-45 12z"/><path fill="#F16529" d="M64 117l36-10 9-96H64z"/><path fill="#EBEBEB" d="M64 52H46l-1-14h19V24H29l3 42h32zm0 36l-15-4-1-11H34l2 22 28 8z"/><path fill="#fff" d="M64 52v14h17l-2 18-15 4v14l28-8 3-42zm0-28v14h33l1-14z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">HTML5</span>
+                      <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#00ff88"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon css"><svg viewBox="0 0 128 128"><path fill="#1572B6" d="M19 114L9 1h110l-10 113-45 12z"/><path fill="#33A9DC" d="M64 117l37-10 9-96H64z"/><path fill="#fff" d="M64 51h18l1-14H64V23h35l-4 42H64zm0 36l-15-4-1-11H34l2 22 28 8z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">CSS3</span>
+                      <span class="rn-badge" style="--bc:#00ff88" data-lang="level-sec">Avanzado</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#00ff88"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(240,219,79,0.12)"><svg viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1 1h126v126H1z"/><path fill="#323330" d="M116 97c-1-6-5-11-16-15-4-2-8-3-9-6-1-2-1-3 0-4 1-3 5-4 8-3 2 1 4 2 5 5 5-4 5-4 9-6-1-2-2-3-3-4-3-4-8-5-15-5l-4 1c-3 1-7 3-9 5-6 7-4 18 3 23 7 5 18 7 19 12 1 6-4 8-10 7-4-1-7-3-9-7l-10 6c1 2 2 4 4 5 9 9 32 9 36-5 0 0 1-4 1-9zM69 59H58v30c0 6 0 12-1 14-2 4-6 3-8 2-2-1-3-2-4-4l-1-2-10 6c2 3 4 6 7 8 4 2 10 3 17 2 4-1 8-4 9-7 3-5 2-11 2-17V59z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">JavaScript</span>
+                      <span class="rn-badge" style="--bc:#00ff88" data-lang="level-sec">Avanzado</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#00ff88"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(203,102,153,0.12)"><svg viewBox="0 0 128 128"><path fill="#CB6699" d="M1 56c0 1 0 2 1 2 1 3 2 5 4 8 3 3 6 6 10 8l9 6-1 1c-4 2-8 4-11 7-2 2-4 3-6 6-2 4-3 8-1 12 1 1 1 2 2 3l1 1 3 1h3c3 0 6-1 9-3 4-3 7-7 8-12 1-4 1-7 0-11l-1-1-1-1 7-4h1l-1 1c-1 3-1 6-1 9 0 3 1 6 3 9 2 2 5 2 7 0l2-3 3-7 5-12c2-4 3-8 5-12l1-1c0 2 1 3 1 5 1 2 1 3 2 5l-2 2c-2 3-3 4-4 7 0 1-1 2 0 3 0 2 2 3 4 3l3-1c3-2 6-4 9-7 3-3 5-6 5-10 0-1-1-2-1-3-1-1-1-1-3-1-4 0-9 2-13 5l-3 1c0-1-1-1-1-1l-2-5c0-2-1-3 0-5l1-4c0-1 0-1-1-2l-5 1-1 1-2 5c-3 6-6 13-8 19l-2 4-1 1-1-1v-2l2-7c0-2 1-4 1-6 0-1 0-1-1-2l-3 1-1 1v-1c0-1 0-3-1-4-1-2-2-3-4-3-1 0-2 0-3 1-3 1-6 4-8 7l-8 5-3 2c-1-1-2-2-2-2-3-2-5-4-7-7-1-2-2-4-2-6 0-3 1-6 2-8 2-3 5-6 8-8 3-3 7-5 10-7 5-3 10-5 15-7 6-2 11-3 17-2 2 0 4 1 7 2 2 1 3 2 3 4 1 2 1 3 0 5-1 4-3 6-5 9-4 4-9 7-14 9-3 1-6 2-10 2-3 0-5 0-8-1-2-1-3-2-4-3-1 0 0-1 0-1 0 1 0 1 1 2 1 1 1 2 2 3 3 3 2 6 2 9 2 5 0 9-1 14-2 6-2 12-5 16-10 4-4 6-9 7-14 0-3 0-5-1-8-1-3-4-5-6-6C68 17 64 17 60 17h-4c-5 0-10 1-15 3-4 1-7 3-11 5-8 4-15 8-21 15-3 3-5 7-7 11l-1 4v1zm28 36c0 4-2 8-6 11-2 2-4 3-6 3-1 0-2 0-3-1-1-1-1-2-2-3v-3c1-2 1-4 2-5 1-2 3-4 5-5l9-6c0 2 1 4 1 6v3zm25 15l-6-7c0 3-4 8-6 7l6-7zm20-5l-1 1-1-1c1-3 2-5 5-7 1 3 0 6-3 8z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Sass</span>
+                      <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#00ff88"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(56,189,248,0.12)"><svg viewBox="0 0 128 128"><path d="M64 26c-17 0-28 8-32 26 6-9 14-12 22-10 5 1 8 5 12 9 6 6 14 14 30 14 17 0 28-9 32-26-6 9-14 12-22 10-5-1-8-5-12-9C88 34 81 26 64 26zM32 64c-17 0-28 9-32 26 6-9 14-12 22-10 5 1 8 5 12 9 6 6 14 14 30 14 17 0 28-9 32-26-6 9-14 12-22 10-5-1-8-5-12-9C56 72 49 64 32 64z" fill="#38bdf8"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Tailwind</span>
+                      <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#00ff88"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(97,218,251,0.12)"><svg viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11"/><path d="M107 45c-2-1-5-2-7-2 1-2 1-5 2-7 2-13 0-23-7-26-2-1-4-2-6-2-7 0-16 5-25 14C55 13 46 8 39 8c-2 0-5 1-6 2-7 4-9 13-7 26 0 2 1 5 2 7-2 1-5 1-7 2C8 50 1 57 1 64s7 14 19 19c2 1 5 2 7 2-1 3-2 5-2 7-2 13 0 23 7 26 2 1 4 2 6 2 7 0 16-5 25-14 9 9 18 14 25 14 2 0 5-1 6-2 7-4 9-13 7-26 0-2-1-5-2-7 2-1 5-1 7-2 12-5 19-11 19-19s-7-14-19-19zM93 15c4 2 5 10 4 20l-1 7c-5-1-11-2-17-3-3-5-7-9-10-13 7-7 15-12 21-12 1 0 2 0 3 1zM81 74l-6 10c-4 0-7 0-11 0-4 0-8 0-11 0l-6-10-5-10 5-10 6-10c4 0 7 0 11 0 4 0 8 0 11 0l6 10 5 10-5 10zm8-3c2 3 3 7 4 10-3 1-7 1-11 2l4-6 3-6zm-7-25l-4-6 11 2c-1 3-2 7-4 10l-3-6zM64 30l7 8-7 0-7 0 7-8zm-18 14l-4 6-4-10 11-2-3 6zM35 15c1-1 2-1 4-1 6 0 13 5 21 12-3 4-7 8-10 13-6 1-11 2-16 3l-2-7C31 25 32 17 35 15zM7 64c0-5 6-10 16-13l6-2c2 5 4 10 6 16-2 5-4 10-6 15C15 76 7 70 7 64zm28 49c-4-2-5-10-4-20l1-7 17 3c3 5 7 9 10 13-7 7-15 12-21 12-1 0-2 0-3-1zM96 93c2 10 0 18-4 20-1 1-2 1-4 1-6 0-13-5-21-12 3-4 7-9 10-13 6-1 11-1 17-3l2 7zm9-16l-6 2c-2-5-4-10-6-16 2-5 4-10 6-15 14 4 22 10 22 16 0 5-6 10-16 13z"/></g></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">React.js</span>
+                      <span class="rn-badge" style="--bc:#00ff88" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <section id="cta" class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2 data-lang="cta-title">Ready for your next project?</h2>
-        <p data-lang="cta-subtitle">
-          Let's work together to create something amazing
-        </p>
-        <button class="cta-button" data-lang="cta-button" onclick="scrollToSection('#contact')">
-          Start Project
-        </button>
+          <div class="roadmap-group">
+            <div class="roadmap-group-label">
+              <span class="roadmap-group-dot" style="background:#ff00aa;box-shadow:0 0 10px #ff00aa"></span>
+              <span data-lang="backend">Backend</span>
+            </div>
+            <div class="roadmap-track">
+              <div class="roadmap-line" style="--lc:#ff00aa"></div>
+              <div class="roadmap-nodes">
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#ff00aa"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(131,205,41,0.12)"><svg viewBox="0 0 128 128"><path fill="#83CD29" d="M113 30L69 5c-3-2-6-2-9 0L15 30C12 32 10 35 10 38v51c0 3 2 6 5 8l12 7c6 3 8 3 10 3 8 0 13-5 13-14V43c0-1 0-2-1-2h-6c-1 0-2 1-2 2v50c0 4-4 8-10 4L19 91c0 0-1-1-1-1V38c0 0 1-1 1-1l44-26c0 0 1 0 1 0l44 26c0 0 0 1 0 1v51c0 0 0 1 0 1L63 116c0 0-1 0-1 0L51 109c0 0-1 0-1 0-3 2-4 2-7 3-1 0-2 1 0 2l15 9c1 1 3 1 5 1 2 0 3 0 5-1l44-26c3-2 4-5 4-8V38c0-3-1-6-4-8zM78 81c-12 0-14-3-15-9-1-1-1-1-1-1h-6c-1 0-1 1-1 2 0 7 4 17 23 17 14 0 22-5 22-15 0-10-6-12-20-14C66 60 65 59 65 56c0-3 1-6 11-6 9 0 12 2 14 8 0 1 1 1 1 1h6c0 0 1 0 1 0 0 0 0-1 0-1C97 47 90 42 76 42c-13 0-20 5-20 14 0 10 7 12 20 14 14 1 16 4 16 6 0 5-4 7-13 7z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Node.js</span>
+                      <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#ff00aa"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(255,255,255,0.06)"><svg viewBox="0 0 128 128"><path fill="#fff" d="M127 98c-5 1-7 0-10-4-6-8-12-17-18-25-1-1-2-2-3-3C89 76 82 85 75 95c-2 3-5 5-9 4l27-36L68 30c4-1 7 0 10 3 6 9 12 17 19 25 6-9 13-17 19-25 2-3 5-5 9-3-3 4-6 9-10 13-4 6-9 12-13 17-2 2-1 3 0 5C110 76 118 87 127 98zM1 62c1-4 1-7 2-11C9 30 31 21 47 34c9 8 12 18 11 31H7c-1 22 15 36 36 29 7-2 11-8 13-15 1-4 3-4 6-3-2 9-6 16-14 21-12 7-29 5-38-5C5 86 3 79 2 71c0-1 0-2-1-4V62zm6-1h50c0-16-10-27-24-28C18 33 7 44 7 61z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Express.js</span>
+                      <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#ff00aa"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(255,212,59,0.12)"><svg viewBox="0 0 128 128"><path fill="#5A9FD4" d="M63 2C59 2 55 2 51 3 41 5 39 9 39 16v9h25v3H30c-7 0-13 4-15 13-2 9-2 15 0 25 2 7 6 13 13 13h8V67c0-8 7-15 15-15h25c7 0 12-6 12-13V16c0-7-6-12-12-13C71 2 67 2 63 2zM50 10c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z"/><path fill="#FFD43B" d="M92 28v11c0 9-7 16-15 16H51c-7 0-12 6-12 13v23c0 7 6 11 12 13 8 2 15 2 25 0 6-2 12-5 12-13v-9H64v-3h37c7 0 10-5 12-13 3-8 2-15 0-25-2-7-5-13-12-13H92zM78 88c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Python</span>
+                      <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#ff00aa"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(0,97,138,0.15)"><svg viewBox="0 0 128 128"><path fill="#00618A" d="M117 98c-7 0-12 0-17 2-1 1-3 1-3 2 1 1 1 2 1 3 1 2 3 4 4 5 2 1 4 3 5 4 3 2 7 3 10 5 2 1 4 3 6 4 1 1 2 2 3 2v0c-1-1-1-2-1-3l-3-3c-2-3-6-6-9-9-3-2-9-5-10-8l0 0c2 0 4-1 6-1 3-1 6-1 9-1l4-1v-1c-2-2-3-4-4-5-4-4-9-7-14-11-3-2-6-3-9-4-1 0-3-1-3-2-2-2-2-4-4-7-2-5-5-10-7-15-1-3-2-7-4-10C89 26 79 17 64 9c-3-2-7-3-11-4H42c-1-1-3-2-4-3C30 5 17-2 14 7c-2 6 3 11 5 14 1 2 3 4 4 6 1 1 1 3 1 4 1 4 3 8 4 12 1 2 2 4 3 5 1 1 2 1 2 3-1 2-1 4-2 6C28 67 29 79 33 86c1 2 5 7 9 5 4-2 3-6 4-11 0-1 0-2 1-2v0l3 7c3 4 7 9 11 12 2 1 4 4 6 5v0h0c-1-1-1-1-2-2-2-2-3-3-4-5-4-5-7-10-10-16-1-3-3-6-4-8 0-1 0-3-1-3-1 2-3 4-4 6-2 4-2 8-2 13h0c-3-1-4-3-5-6-3-6-3-16-1-23 1-2 3-8 2-9-1-2-2-3-3-4-1-2-2-4-3-5-2-5-3-10-5-15-1-2-3-5-4-7-2-2-3-4-5-7 0-1-1-3 0-4 0-1 1-1 1-1 1-1 4 0 5 1 3 1 6 3 8 4 1 1 3 2 4 3h2c3 1 6 0 8 1 5 1 9 4 12 6 11 7 20 17 27 29 1 2 1 4 2 6 2 4 4 8 6 12 2 4 4 8 6 12 1 2 6 3 9 4 2 1 4 1 6 2 3 2 6 4 9 6 1 1 6 3 6 5zM30 23c-1 0-2 0-4 0v0h0c1 1 2 2 3 4 1 1 1 3 2 4l0 0c1-1 2-2 2-4 0-1-1-1-1-2-1-1-2-1-2-2z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">MySQL</span>
+                      <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#ff00aa"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(68,121,161,0.15)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#4479A1" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <div class="rn-info">
+                      <span class="rn-name">SQL</span>
+                      <span class="rn-badge" style="--bc:#ff00aa" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-group">
+            <div class="roadmap-group-label">
+              <span class="roadmap-group-dot" style="background:#8800ff;box-shadow:0 0 10px #8800ff"></span>
+              <span data-lang="development-tools">Tools</span>
+            </div>
+            <div class="roadmap-track">
+              <div class="roadmap-line" style="--lc:#8800ff"></div>
+              <div class="roadmap-nodes">
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#8800ff"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(243,79,41,0.12)"><svg viewBox="0 0 128 128"><path fill="#F34F29" d="M125 58L70 3c-3-3-8-3-11 0L47 15l14 14c3-1 7 0 10 2 3 3 3 7 2 10l14 14c3-1 7 0 10 2 4 4 4 10 0 14a10 10 0 01-14 0 10 10 0 01-2-11L69 48v34a10 10 0 013 2c4 4 4 10 0 14-4 4-10 4-14 0-4-4-4-10 0-14a10 10 0 013-2V47a10 10 0 01-3-2c-3-3-4-7-2-11L41 20 3 58a8 8 0 000 12l55 55c3 3 8 3 11 0l55-55a8 8 0 000-12z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Git</span>
+                      <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#8800ff"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(255,255,255,0.06)"><svg viewBox="0 0 128 128"><path fill="#e0e0e0" d="M64 5C33 5 8 30 8 61c0 25 16 46 38 53 3 1 4-1 4-3 0-1 0-6 0-11-17 4-20-7-20-7-3-7-7-9-7-9-5-4 0-4 0-4 6 0 9 6 9 6 5 9 14 7 18 5 1-4 2-7 4-8-13-2-28-7-28-30 0-7 2-12 6-16-1-2-3-8 1-16 0 0 5-2 17 6 5-1 10-2 15-2s10 1 15 2c12-8 17-6 17-6 3 8 1 14 1 16 4 4 6 9 6 16 0 23-14 28-28 30 2 2 4 6 4 11 0 8 0 15 0 17 0 2 1 3 4 3 22-7 38-28 38-53C120 30 95 5 64 5z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">GitHub</span>
+                      <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#8800ff"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(10,207,131,0.12)"><svg viewBox="0 0 128 128"><path fill="#0acf83" d="M45 129c12 0 21-10 21-21V86H45C34 86 24 96 24 108S34 129 45 129z"/><path fill="#a259ff" d="M24 65C24 53 34 43 45 43H67v43H45C34 86 24 76 24 65z"/><path fill="#f24e1e" d="M24 22C24 10 34 0 45 0H67v43H45C34 43 24 33 24 22z"/><path fill="#ff7262" d="M67 0h21C100 0 110 10 110 22S100 43 88 43H67z"/><path fill="#1abcfe" d="M110 65c0 12-10 21-21 21S67 76 67 65 77 43 88 43 110 53 110 65z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Figma</span>
+                      <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#8800ff"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(10,135,207,0.12)"><svg viewBox="0 0 128 128"><defs><filter id="b" width="144.744" height="113.408" x="-8.41115" y="22.5944" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feGaussianBlur stdDeviation="4.16667"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape"/></filter><filter id="c" width="56.6667" height="144.007" x="79.6667" y="-8.0035" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feGaussianBlur stdDeviation="4.16667"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape"/></filter><linearGradient id="d" x1="63.9222" x2="63.9222" y1="0.329902" y2="127.67" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><mask id="a" width="128" height="128" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#fff" fill-rule="evenodd" d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64 1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68 50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z" clip-rule="evenodd"/></mask><g mask="url(#a)"><path fill="#0065A9" d="M123.471 13.82 97.097 1.12A7.973 7.973 0 0 0 88 2.668L1.662 81.387a5.333 5.333 0 0 0 .006 7.887l7.052 6.411a5.333 5.333 0 0 0 6.811.303l103.971-78.875c3.488-2.646 8.498-.158 8.498 4.22v-.306a8.001 8.001 0 0 0-4.529-7.208Z"/><g filter="url(#b)"><path fill="#007ACC" d="m123.471 114.181-26.374 12.698A7.973 7.973 0 0 1 88 125.333L1.662 46.613a5.333 5.333 0 0 1 .006-7.887l7.052-6.411a5.333 5.333 0 0 1 6.811-.303l103.971 78.874c3.488 2.647 8.498.159 8.498-4.219v.306a8.001 8.001 0 0 1-4.529 7.208Z"/></g><g filter="url(#c)"><path fill="#1F9CF0" d="M97.098 126.882A7.977 7.977 0 0 1 88 125.333c2.952 2.952 8 .861 8-3.314V5.98c0-4.175-5.048-6.266-8-3.313a7.977 7.977 0 0 1 9.098-1.549L123.467 13.8A8 8 0 0 1 128 21.01v85.982a8 8 0 0 1-4.533 7.21l-26.369 12.681Z"/></g><path fill="url(#d)" fill-rule="evenodd" d="M90.69 127.126a7.968 7.968 0 0 0 6.349-.244l26.353-12.681a8 8 0 0 0 4.53-7.21V21.009a8 8 0 0 0-4.53-7.21L97.039 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026-21.974-16.68a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.336 5.336 0 0 0-.006 7.888L20.718 64 1.662 81.386a5.335 5.335 0 0 0 .006 7.888l7.048 6.411a5.328 5.328 0 0 0 6.807.303l21.975-16.681 50.45 46.026a7.959 7.959 0 0 0 2.742 1.793Zm5.252-92.184L57.662 64l38.28 29.057V34.943Z" clip-rule="evenodd" opacity="0.25" style="mix-blend-mode:overlay"/></g></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Visual Studio Code</span>
+                      <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="roadmap-node">
+                  <div class="rn-dot" style="--dc:#8800ff"></div>
+                  <div class="rn-card">
+                    <div class="rn-icon" style="background:rgba(223,132,14,0.12)"><svg height="1em" style="flex:none;line-height:1" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>Claude</title><path fill="#D97757" fill-rule="nonzero" d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"/></svg></div>
+                    <div class="rn-info">
+                      <span class="rn-name">Claude AI</span>
+                      <span class="rn-badge" style="--bc:#8800ff" data-lang="level">Intermedio</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <section id="services" class="services-section" aria-label="Servicios">
+      <div class="container">
+        <h2 class="section-title" data-lang="services-title">Professional Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3 data-lang="service-web-dev">FullStack Web Development</h3>
+            <p data-lang="service-web-desc">Complete applications with integrated backend and frontend</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3 data-lang="service-responsive">Responsive Applications</h3>
+            <p data-lang="service-responsive-desc">Designs that adapt to any device</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-database"></i>
+            <h3 data-lang="service-database">Database Integration</h3>
+            <p data-lang="service-database-desc">Robust systems with MySQL, etc.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3 data-lang="service-data">Data analysis</h3>
+            <p data-lang="service-data-desc">Professional and optimal data analysis, using the best tools in the industry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-label="Contacto">
+      <div class="container">
+        <h2 class="section-title" data-lang="contact-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div class="info-text">
+                <h4 data-lang="email">Email</h4>
+                <p>alejandrozapt152@gmail.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.497 4.409a10 10 0 0 1 -10.36 16.828l-.223 -.098l-4.759 .849l-.11 .011a1 1 0 0 1 -.11 0l-.102 -.013l-.108 -.024l-.105 -.037l-.099 -.047l-.093 -.058l-.014 -.011l-.012 -.007l-.086 -.073l-.077 -.08l-.067 -.088l-.056 -.094l-.034 -.07l-.04 -.108l-.028 -.128l-.012 -.102a1 1 0 0 1 0 -.125l.012 -.1l.024 -.11l.045 -.122l1.433 -3.304l-.009 -.014a10 10 0 0 1 1.549 -12.454l.215 -.203a10 10 0 0 1 13.226 -.217m-8.997 3.09a1.5 1.5 0 0 0 -1.5 1.5v1a6 6 0 0 0 6 6h1a1.5 1.5 0 0 0 0 -3h-1l-.144 .007a1.5 1.5 0 0 0 -1.128 .697l-.042 .074l-.022 -.007a4.01 4.01 0 0 1 -2.435 -2.435l-.008 -.023l.075 -.041a1.5 1.5 0 0 0 .704 -1.272v-1a1.5 1.5 0 0 0 -1.5 -1.5"/></svg>
+              <div class="info-text">
+                <h4 data-lang="phone">WhatsApp</h4>
+                <p>+57 3042202913</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info-text">
+                <h4 data-lang="location">Location</h4>
+                <p>Medellín, Colombia</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="3851c801-27a8-4f26-8a70-3ef0aea5e5d1">
+            <input type="checkbox" name="botcheck" style="display:none;">
+            <input type="hidden" name="subject" value="Nuevo mensaje desde mi portfolio">
+            <input type="hidden" name="from_name" value="Portfolio Alejandro">
+
+            <div class="form-group">
+              <label for="name" data-lang="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+              <div class="input-glow"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-lang="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+              <div class="input-glow"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" data-lang="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Quiero trabajar contigo..."></textarea>
+              <div class="input-glow"></div>
+            </div>
+
+            <button type="submit" class="submit-button" data-lang="send-message">Send Message</button>
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta-section" aria-label="Llamada a la acción">
+      <div class="container">
+        <div class="cta-content">
+          <h2 data-lang="cta-title">Ready for your next project?</h2>
+          <p data-lang="cta-subtitle">Let's work together to create something amazing</p>
+          <button class="cta-button" data-lang="cta-button" data-scroll-to="#contact">Start Project</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer-section">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
           <i class="fas fa-terminal"></i>
           <h3>AlejoDev</h3>
-          <p data-lang="footer-desc">
-            Crafting digital experiences with passion and precision
-          </p>
+          <p data-lang="footer-desc">Crafting digital experiences with passion and precision</p>
         </div>
 
         <div class="footer-links">
@@ -920,46 +618,14 @@
 
         <div class="footer-contact">
           <h4 data-lang="contact">Contact</h4>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <!--Boxicons v3.0.7 https://boxicons.com | License  https://docs.boxicons.com/free-->
-              <path
-                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v.51l-8 6.22-8-6.22V6zM4 18V9.04l7.39 5.74c.18.14.4.21.61.21s.43-.07.61-.21L20 9.03v8.96H4Z">
-              </path>
-            </svg>
-            alejandrozapt152@gmail.com
-          </p>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-              class="icon icon-tabler icons-tabler-filled icon-tabler-brand-whatsapp">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M18.497 4.409a10 10 0 0 1 -10.36 16.828l-.223 -.098l-4.759 .849l-.11 .011a1 1 0 0 1 -.11 0l-.102 -.013l-.108 -.024l-.105 -.037l-.099 -.047l-.093 -.058l-.014 -.011l-.012 -.007l-.086 -.073l-.077 -.08l-.067 -.088l-.056 -.094l-.034 -.07l-.04 -.108l-.028 -.128l-.012 -.102a1 1 0 0 1 0 -.125l.012 -.1l.024 -.11l.045 -.122l1.433 -3.304l-.009 -.014a10 10 0 0 1 1.549 -12.454l.215 -.203a10 10 0 0 1 13.226 -.217m-8.997 3.09a1.5 1.5 0 0 0 -1.5 1.5v1a6 6 0 0 0 6 6h1a1.5 1.5 0 0 0 0 -3h-1l-.144 .007a1.5 1.5 0 0 0 -1.128 .697l-.042 .074l-.022 -.007a4.01 4.01 0 0 1 -2.435 -2.435l-.008 -.023l.075 -.041a1.5 1.5 0 0 0 .704 -1.272v-1a1.5 1.5 0 0 0 -1.5 -1.5" />
-            </svg>
-            +57 3042202913
-          </p>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <!--Boxicons v3.0.7 https://boxicons.com | License  https://docs.boxicons.com/free-->
-              <path
-                d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2">
-              </path>
-              <path
-                d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6">
-              </path>
-            </svg>
-            Medellín, Colombia
-          </p>
+          <p>alejandrozapt152@gmail.com</p>
+          <p>+57 3042202913</p>
+          <p>Medellín, Colombia</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>
-          &copy; 2026 AlejoDev.
-          <span data-lang="all-rights">All rights reserved</span>.
-          <a href="#" class="footer-policy-link" data-modal="privacy" data-lang="privacy-policy">Privacy Policy</a> |
-          <a href="#" class="footer-policy-link" data-modal="terms" data-lang="terms-conditions">Terms & Conditions</a>
-        </p>
+        <p>&copy; 2026 AlejoDev. <span data-lang="all-rights">All rights reserved</span>.</p>
       </div>
     </div>
   </footer>
@@ -979,16 +645,12 @@
       <button class="modal-close" id="certificateClose" aria-label="Close">&times;</button>
       <h3 id="certificateTitle" data-lang="certificate-title">Certificado</h3>
       <iframe id="certificateFrame" src="" width="100%" height="450" style="border: 0; border-radius: 10px;"></iframe>
-      <p style="color: var(--gray-text); margin-top: 0.8rem;" data-lang="certificate-note">Para ver el certificado
-        completo, usa el botón de descarga.</p>
-      <a id="certificateDownload" href="#" class="action-button primary"
-        style="margin-top:0.8rem; display:inline-block;" download data-lang="download-certificate">Descargar
-        certificado</a>
+      <p style="color: var(--gray-text); margin-top: 0.8rem;" data-lang="certificate-note">Para ver el certificado completo, usa el botón de descarga.</p>
+      <a id="certificateDownload" href="#" class="action-button primary" style="margin-top:0.8rem; display:inline-block;" download data-lang="download-certificate">Descargar certificado</a>
     </div>
   </div>
 
-  <!-- Scroll to Top -->
-  <button class="scroll-top" id="scrollTop">
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
     <i class="fas fa-arrow-up"></i>
   </button>
 
@@ -999,32 +661,21 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       const formData = new FormData(form);
-
       status.textContent = "Enviando... ⏳";
-
       try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-        });
-
+        const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
         const data = await response.json();
-
         if (data.success) {
           status.textContent = "Mensaje enviado satisfactoriamente ✅";
           form.reset();
         } else {
-          status.textContent = "Algo paso, intenta nuevamente ❌";
+          status.textContent = "Algo pasó, intenta nuevamente ❌";
         }
-
       } catch (error) {
         status.textContent = "Error de conexión, reintenta nuevamente ❌";
       }
     });
   </script>
-
 </body>
-
 </html>
