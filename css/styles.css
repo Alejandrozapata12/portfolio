@@ -1082,6 +1082,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    margin-top: 0.8rem;
 }
 
 
@@ -1893,7 +1894,6 @@ section {
     font-size: 1.6rem;
     cursor: pointer;
 }
-
 
 .service-card::before {
     content: '';
